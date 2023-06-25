@@ -1,0 +1,50 @@
+@import "../../styles/mixins.module.scss";
+
+.stars {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #323131;
+  transition: 5s;
+}
+
+.star1 {
+  width: 1px;
+  height: 1px;
+  background: 0 0;
+  animation: animateStars 50s linear infinite;
+  @include star1_shadow;
+}
+.star2 {
+  width: 1.5px;
+  height: 2px;
+  background: 0 0;
+  animation: animateStars 50s linear infinite;
+  @include star2_shadow;
+}
+.star3 {
+  width: 2px;
+  height: 2px;
+  background: 0 0;
+  animation: animateStars 50s linear infinite;
+  @include star3_shadow;
+}
+.star4 {
+  width: 3px;
+  height: 3px;
+  background: 0 0;
+  animation: animateStars 50s linear infinite;
+  @include star4_shadow;
+}
+
+@keyframes animateStars {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-2000px);
+  }
+}

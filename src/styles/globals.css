@@ -1,0 +1,30 @@
+:root {
+  --header-background-color: #f0f0f0;
+  --main-text-color: #000;
+  --secondary-text-color: #b92f2c;
+  --btn-text-color: #fff;
+  --btn-hover-color: #000;
+  --footer-text-color: #545454;
+  --footer-background-color: #f7f7f7;
+  --theme-dark-background-color: #323131;
+  --theme-dark-background-footer-color: #292929;
+  --theme-dark-text-color: #f7f7f7;
+  --theme-dark-div-btn-color: #7d7878;
+  --theme-dark-tbn-color: #262626;
+  --theme-light-btn-color: #ed8b14;
+  --theme-btn-shadow-left: #3d3c3a;
+  --theme-btn-shadow-right: #ed8b14;
+  --theme-light-div-btn-color: #d8d2d2;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}

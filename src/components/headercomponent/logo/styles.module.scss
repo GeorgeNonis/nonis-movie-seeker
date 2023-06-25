@@ -1,0 +1,25 @@
+.logolink {
+  all: unset;
+  display: grid;
+  grid-auto-flow: column;
+  place-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.svg {
+  width: 3rem;
+  height: 3rem;
+  color: white;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue,
+    AppleSystem, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu,
+    Cantarell, Helvetica Neue, AppleSystem, BlinkMacSystemFont, Segoe UI, Roboto,
+    Noto Sans, Ubuntu, Cantarell, Helvetica Neue, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI emoji;
+}

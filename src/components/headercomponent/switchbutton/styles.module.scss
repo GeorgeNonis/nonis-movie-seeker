@@ -1,0 +1,24 @@
+.switchdiv {
+  width: 100px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: #7d7878;
+  border: 2px solid #87cefa;
+  position: relative;
+  transition: all 500ms ease-in-out;
+}
+
+.switchbutton {
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+
+  margin: 0;
+  position: absolute;
+
+  background: #323131;
+  border: none;
+
+  transition: all 500ms ease-in-out;
+}
