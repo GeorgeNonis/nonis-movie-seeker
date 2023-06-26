@@ -3,10 +3,15 @@ import Starsbackdrop from "@/components/starsbackdrop/starsbackdrop";
 import styles from "../styles/Home.module.css";
 import Headercomponent from "@/components/headercomponent/headercomponent";
 import { GetStaticPaths, GetStaticProps } from "next";
-import { Movies } from "./interfaces";
+import { Movie, Movies } from "./interfaces";
 import Carousel from "@/components/carousel/carousel";
 
-const HomePage = ({ ...rest }: Movies) => {
+interface HomePageProps {
+  movies: Movie[];
+  twentymovies: Movie[];
+}
+
+const HomePage = ({ ...rest }: HomePageProps) => {
   console.log({ rest });
 
   return (
@@ -21,7 +26,6 @@ const HomePage = ({ ...rest }: Movies) => {
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {
-  console.log("isnide path");
   const axios = require("axios");
 
   const options = {
@@ -32,10 +36,18 @@ export const getStaticProps: GetStaticProps = async (context) => {
       "X-RapidAPI-Host": "imdb-top-100-movies1.p.rapidapi.com",
     },
   };
-  let movies: any | Movies = [];
+  let movies: any | Movie[] = [];
+  let twentymovies: any | Movie[] = [];
+
   try {
     const response = await axios.request(options);
     movies = [...response.data];
+
+    let i = 0;
+    while (i < 20) {
+      twentymovies.push(movies[i]);
+      i++;
+    }
     console.log(response.data);
   } catch (error) {
     console.error(error);
@@ -43,6 +55,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   return {
     props: {
       movies: [...movies],
+      twentymovies: [...twentymovies],
     },
     revalidate: 30,
   };

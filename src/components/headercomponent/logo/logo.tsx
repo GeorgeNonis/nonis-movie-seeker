@@ -1,13 +1,14 @@
 import { BiCameraMovie } from "react-icons/bi";
-import styles from "./styles.module.scss";
 import Link from "next/link";
+import styles from "./styles.module.scss";
+import { APP_TITLE } from "../../../../config";
 
 const Logo = () => {
   return (
     <>
       <Link href={"/"} className={styles.logolink}>
         <BiCameraMovie className={styles.svg} />
-        <span className={styles.logo}>Unraveling Nonis&apos;s World</span>
+        <span className={styles.logo}>{APP_TITLE}</span>
       </Link>
     </>
   );
