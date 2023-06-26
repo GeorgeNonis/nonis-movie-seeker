@@ -2,15 +2,19 @@ import { createSlice } from "@reduxjs/toolkit";
 import { InitialState } from "./interfaces";
 
 const initialState = {
-  test: "Giorgos",
+  theme: false,
 } as InitialState;
 
 const state = createSlice({
   name: "state",
   initialState,
-  reducers: {},
+  reducers: {
+    changeTheme(state) {
+      state.theme = !state.theme;
+    },
+  },
 });
 
-export const {} = state.actions;
+export const { changeTheme } = state.actions;
 
 export default state.reducer;

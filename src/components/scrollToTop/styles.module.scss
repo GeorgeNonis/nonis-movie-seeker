@@ -1,0 +1,15 @@
+.toTop {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  color: black;
+  svg {
+    width: 2rem;
+    height: 2rem;
+    cursor: pointer;
+    background-color: #fff9d6;
+    border-radius: 50%;
+    outline: none;
+    border: none;
+  }
+}

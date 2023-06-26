@@ -1,10 +1,11 @@
 import axios from "axios";
-import Starsbackdrop from "@/components/starsbackdrop/starsbackdrop";
+import Starsbackdrop from "@/components/starsbackdrop";
 import styles from "../styles/Home.module.css";
-import Headercomponent from "@/components/headercomponent/headercomponent";
+import Headercomponent from "@/components/headercomponent";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { Movie, Movies } from "./interfaces";
-import Carousel from "@/components/carousel/carousel";
+import Carousel from "@/components/carousel";
+import ScrollToTop from "@/components/scrollToTop";
 
 interface HomePageProps {
   movies: Movie[];
@@ -12,13 +13,12 @@ interface HomePageProps {
 }
 
 const HomePage = ({ ...rest }: HomePageProps) => {
-  console.log({ rest });
-
   return (
     <>
       <main className={styles.main}>
         <Headercomponent />
         <Carousel {...rest} />
+        <ScrollToTop />
       </main>
       <Starsbackdrop />
     </>

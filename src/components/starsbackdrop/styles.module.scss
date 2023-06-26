@@ -7,8 +7,8 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #323131;
-  transition: 5s;
+  // background-color: #323131;
+  transition: 500ms;
 }
 
 .star1 {
@@ -22,21 +22,21 @@
   width: 1.5px;
   height: 2px;
   background: 0 0;
-  animation: animateStars 50s linear infinite;
+  animation: animateStars 100s linear infinite;
   @include star2_shadow;
 }
 .star3 {
   width: 2px;
   height: 2px;
   background: 0 0;
-  animation: animateStars 50s linear infinite;
+  animation: animateStars 150s linear infinite;
   @include star3_shadow;
 }
 .star4 {
   width: 3px;
   height: 3px;
   background: 0 0;
-  animation: animateStars 50s linear infinite;
+  animation: animateStars 600s linear infinite;
   @include star4_shadow;
 }
 

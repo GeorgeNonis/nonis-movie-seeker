@@ -1,15 +1,16 @@
-import { useSelector } from "react-redux";
-import { IRootState } from "@/store";
+import { useDispatch } from "react-redux";
 import { useState } from "react";
+import { changeTheme } from "@/store/state-slicer";
 export const useSwitchButton = () => {
-  const { test } = useSelector((state: IRootState) => state.state);
+  const dispatch = useDispatch();
+
   const [theme, setTheme] = useState(false);
   /**
    * Temporary
    */
   const SwitchHandler = () => {
     setTheme(!theme);
-    console.log({ test });
+    dispatch(changeTheme());
   };
 
   const right = {

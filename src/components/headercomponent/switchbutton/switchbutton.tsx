@@ -3,7 +3,7 @@ import { useSwitchButton } from "./useSwitchButton";
 import styles from "./styles.module.scss";
 
 const SwitchButton = () => {
-  const { left, right, theme, SwitchHandler } = useSwitchButton();
+  const { theme, SwitchHandler } = useSwitchButton();
   return (
     <Switch
       offHandleColor="#323131"

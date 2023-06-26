@@ -1,3 +1,3 @@
 export interface InitialState {
-  test: string;
+  theme: boolean;
 }

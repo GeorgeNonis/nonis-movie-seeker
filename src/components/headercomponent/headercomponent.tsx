@@ -1,8 +1,5 @@
-import useHeaderComponent from "./useHeaderComponent";
-import axios from "axios";
 import * as Comp from "../index";
 import styles from "./styles.module.scss";
-import { GetStaticPaths, GetStaticProps } from "next";
 
 const Headercomponent = () => {
   return (

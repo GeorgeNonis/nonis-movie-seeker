@@ -25,7 +25,10 @@
 .carousel {
 }
 
-.carouselbtn {
+.carouselbtnleft {
+  @include btnStyle();
+}
+.carouselbtnright {
   @include btnStyle();
 }
 .leftbutton {

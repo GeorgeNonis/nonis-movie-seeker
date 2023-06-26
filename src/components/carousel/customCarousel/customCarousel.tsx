@@ -2,46 +2,47 @@ import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 import Image from "next/image";
 import { useCustomCarousel } from "./useCustomCarouel";
 import styles from "./styles.module.scss";
+import Img from "./img/img";
 
 const CustomCarousel = () => {
-  const {
-    twentymovies,
-    LeftArrowHandler,
-    RightArrowHandler,
-    translateX,
-    viewportRef,
-  } = useCustomCarousel();
-  //   console.log({ translateX });
-  if (!twentymovies) {
+  const { handlers, values } = useCustomCarousel();
+
+  if (!values.twentymovies) {
     return <p>Loading...</p>;
   }
-  console.log(viewportRef.current?.offsetWidth);
   return (
     <div className={styles.carouseldiv}>
-      <div className={styles.carouselbtn} onClick={LeftArrowHandler}>
+      <div
+        className={styles.carouselbtnleft}
+        onClick={handlers.LeftArrowHandler}
+      >
         <RiArrowLeftSLine className={styles.leftbutton} />
       </div>
       <div className={styles.viewport}>
         <div
           className={styles.carousel}
-          ref={viewportRef}
-          style={{ transform: `translateX(${translateX}px)` }}
+          ref={values.viewportRef}
+          style={{ transform: `translateX(${values.translateX}px)` }}
         >
-          {twentymovies!.map((movie, index) => {
+          {values.twentymovies!.map((movie, index) => {
             return (
-              <Image
-                key={index}
-                width={100}
-                height={100}
-                className={styles.img}
-                src={movie.image[movie.image.length - 1][1]}
-                alt={movie.title}
-              />
+              <Img {...movie} key={index} />
+              //   <Image
+              //     key={index}
+              //     width={100}
+              //     height={100}
+              //     className={styles.img}
+              //     src={movie.image[movie.image.length - 1][1]}
+              //     alt={movie.title}
+              //   />
             );
           })}
         </div>
       </div>
-      <div className={styles.carouselbtn} onClick={RightArrowHandler}>
+      <div
+        className={styles.carouselbtnright}
+        onClick={handlers.RightArrowHandler}
+      >
         <RiArrowRightSLine className={styles.rightbutton} />
       </div>
     </div>
