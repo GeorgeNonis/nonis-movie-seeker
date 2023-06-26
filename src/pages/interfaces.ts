@@ -18,3 +18,8 @@ export interface Movie {
   writers: [string];
   year: number;
 }
+
+export interface HomePageProps {
+  movies: Movie[][];
+  twentymovies: Movie[];
+}

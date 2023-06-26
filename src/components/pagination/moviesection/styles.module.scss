@@ -1,0 +1,34 @@
+.moviesection {
+  width: 80%;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  place-items: center;
+}
+
+.movie {
+  display: grid;
+  gap: 0.7rem;
+  place-items: center;
+}
+
+.img {
+  height: 100%;
+  width: 15rem;
+  object-fit: contain;
+}
+
+.titlewriters {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 100;
+  font-size: 0.8rem;
+}
+
+.genreyear {
+  font-size: 0.8rem;
+  font-weight: 100;
+  text-transform: uppercase;
+  color: red;
+}

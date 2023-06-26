@@ -25,17 +25,7 @@ const CustomCarousel = () => {
           style={{ transform: `translateX(${values.translateX}px)` }}
         >
           {values.twentymovies!.map((movie, index) => {
-            return (
-              <Img {...movie} key={index} />
-              //   <Image
-              //     key={index}
-              //     width={100}
-              //     height={100}
-              //     className={styles.img}
-              //     src={movie.image[movie.image.length - 1][1]}
-              //     alt={movie.title}
-              //   />
-            );
+            return <Img {...movie} key={index} />;
           })}
         </div>
       </div>

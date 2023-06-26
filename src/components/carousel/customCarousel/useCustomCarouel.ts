@@ -1,8 +1,8 @@
 import { useRef, useContext, useState, useEffect } from "react";
-import { MoviesContext } from "../carousel";
+import { MoviesArrays } from "@/context/moviesArray";
 
 export const useCustomCarousel = () => {
-  const { twentymovies } = useContext(MoviesContext);
+  const { twentymovies } = useContext(MoviesArrays);
   const [translateX, setTranslateX] = useState(0);
   const viewportRef = useRef<HTMLDivElement>(null);
   const testRef = useRef<HTMLDivElement>(null);
