@@ -1,7 +1,7 @@
-import { MoviesArrays } from "@/context/moviesArray";
+import { MoviesArrays } from "@/context/moviesarrays/moviesArray";
 import { useContext } from "react";
 import { MovieSectionProps } from "./interfaces";
-import Movie from "../movie/movie";
+import Movie from "../../movie/movie";
 import styles from "./styles.module.scss";
 
 const MovieSection = ({ page }: MovieSectionProps) => {

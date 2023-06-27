@@ -1,6 +1,5 @@
-import { MoviesArrays } from "@/context/moviesArray";
+import { MoviesArrays } from "@/context/moviesarrays/moviesArray";
 import { useContext } from "react";
-import { Movie } from "@/pages/interfaces";
 import { useState } from "react";
 
 export const useMoviePage = () => {
@@ -26,6 +25,13 @@ export const useMoviePage = () => {
     setPage(page_number - 1);
   };
 
+  const LeftArrowHandler = (pageToTransition: number) => {
+    setPage(pageToTransition);
+  };
+  const RightArrowHandler = (pageToTransition: number) => {
+    setPage(pageToTransition);
+  };
+
   const values = {
     page,
     pageNumbers,
@@ -34,6 +40,8 @@ export const useMoviePage = () => {
   const handlers = {
     PageHandler,
     enabled,
+    LeftArrowHandler,
+    RightArrowHandler,
   };
 
   return { values, handlers };

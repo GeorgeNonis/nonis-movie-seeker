@@ -3,6 +3,8 @@
   bottom: 2rem;
   right: 2rem;
   color: black;
+  border: none;
+
   svg {
     width: 2rem;
     height: 2rem;
@@ -11,5 +13,10 @@
     border-radius: 50%;
     outline: none;
     border: none;
+    transition: all 350ms ease-in-out;
+    &:hover {
+      color: #b92f2c;
+      transform: scale(1.2) rotate(-360deg);
+    }
   }
 }

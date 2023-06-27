@@ -1,5 +1,5 @@
 import { useRef, useContext, useState, useEffect } from "react";
-import { MoviesArrays } from "@/context/moviesArray";
+import { MoviesArrays } from "@/context/moviesarrays/moviesArray";
 
 export const useCustomCarousel = () => {
   const { twentymovies } = useContext(MoviesArrays);

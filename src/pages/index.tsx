@@ -7,7 +7,7 @@ import { GetStaticProps } from "next";
 import { HomePageProps, Movie } from "./interfaces";
 import Carousel from "@/components/carousel";
 import ScrollToTop from "@/components/scrollToTop";
-import MoviesArraysProvider from "@/context/moviesArray";
+import MoviesArraysProvider from "@/context/moviesarrays/moviesArray";
 import MoviePage from "@/components/pagination/moviepage";
 
 const HomePage = ({ ...rest }: HomePageProps) => {
