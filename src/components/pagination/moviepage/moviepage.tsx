@@ -1,22 +1,16 @@
 import { useMoviePage } from "./useMoviePage";
-import styles from "./styles.module.scss";
-import PageNumbers from "../pageNumbers/pageNumbers";
+import PageNumbers from "../pageNumbers";
 import MovieSection from "../moviesection";
+import styles from "./styles.module.scss";
 
 const MoviePage = () => {
   const { handlers, values } = useMoviePage();
-
+  const AllValues = { ...values, ...handlers };
   return (
     <section className={styles.movies}>
-      <PageNumbers
-        pageNumbers={values.pageNumbers}
-        PageHandler={handlers.PageHandler}
-      />
+      <PageNumbers {...AllValues} />
       <MovieSection page={values.page} />
-      <PageNumbers
-        pageNumbers={values.pageNumbers}
-        PageHandler={handlers.PageHandler}
-      />
+      <PageNumbers {...AllValues} />
     </section>
   );
 };

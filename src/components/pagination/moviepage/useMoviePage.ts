@@ -5,7 +5,15 @@ import { useState } from "react";
 
 export const useMoviePage = () => {
   const { movies } = useContext(MoviesArrays);
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
+
+  const enabled = (pageNumber: number, number: number) => {
+    const value =
+      pageNumber === number - 1
+        ? { backgroundColor: "#b92f2c", color: "white" }
+        : undefined;
+    return value;
+  };
 
   const totalPages = movies.length;
 
@@ -25,6 +33,7 @@ export const useMoviePage = () => {
 
   const handlers = {
     PageHandler,
+    enabled,
   };
 
   return { values, handlers };

@@ -1,18 +1,10 @@
-.pageNumbers {
-  width: 70%;
-  margin-inline: auto;
-  display: grid;
-  grid-auto-flow: column;
-  place-items: center;
-}
-
-.page {
+@mixin pageButtonStyle {
+  cursor: pointer;
   width: 2rem;
   height: 2rem;
   border-radius: 8px;
   display: grid;
   place-items: center;
-  cursor: pointer;
   color: black;
   background: white;
   transition: all 250ms ease-in-out;
@@ -22,4 +14,35 @@
 
     transform: scale(1.2);
   }
+}
+
+.pageNumbers {
+  width: 50%;
+  margin-inline: auto;
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
+
+.arrows {
+  @include pageButtonStyle;
+}
+
+.page {
+  @include pageButtonStyle;
+}
+
+.disable {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 8px;
+  display: grid;
+  place-items: center;
+  color: #a1a1a1;
+  background: #e0e0e0;
+  pointer-events: none;
+}
+
+.disablesvg {
+  color: silver;
 }
