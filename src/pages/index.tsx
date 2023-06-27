@@ -5,23 +5,22 @@ import styles from "../styles/Home.module.css";
 import Headercomponent from "@/components/headercomponent";
 import { GetStaticProps } from "next";
 import { HomePageProps, Movie } from "./interfaces";
-import Carousel from "@/components/carousel";
-import ScrollToTop from "@/components/scrollToTop";
-import MoviesArraysProvider from "@/context/moviesarrays/moviesArray";
-import MoviePage from "@/components/pagination/moviepage";
+import * as Comp from "../components";
 
 const HomePage = ({ ...rest }: HomePageProps) => {
   console.log(rest.movies);
   return (
     <>
-      <MoviesArraysProvider {...rest}>
+      <Comp.MoviesArraysProvider {...rest}>
         <main className={styles.main}>
           <Headercomponent />
-          <Carousel />
-          <MoviePage />
-          <ScrollToTop />
+          <Comp.Carousel />
+          <Comp.MoviePage />
+          <Comp.ScrollToTop />
+          <Comp.Techonologies />
+          <Comp.Footer />
         </main>
-      </MoviesArraysProvider>
+      </Comp.MoviesArraysProvider>
       <Starsbackdrop />
     </>
   );

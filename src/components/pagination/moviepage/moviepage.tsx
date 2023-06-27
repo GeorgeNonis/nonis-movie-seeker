@@ -10,9 +10,9 @@ const MoviePage = () => {
   return (
     <MoviesSectionProvider {...AllValues}>
       <section className={styles.movies}>
-        <PageNumbers {...AllValues} />
-        <MovieSection page={values.page} />
-        <PageNumbers {...AllValues} />
+        <PageNumbers />
+        <MovieSection />
+        <PageNumbers />
       </section>
     </MoviesSectionProvider>
   );

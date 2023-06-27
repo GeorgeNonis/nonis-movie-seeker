@@ -1,0 +1,36 @@
+.technologies {
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+}
+
+.div {
+  z-index: 10;
+  cursor: pointer;
+  position: fixed;
+  bottom: 1rem;
+  left: 1rem;
+  background-color: #00c0ff;
+  width: 3rem;
+  height: 3rem;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.svg {
+  color: white;
+  height: 1.5rem;
+  width: 1.5rem;
+  animation: spinning 5s infinite linear;
+}
+
+@keyframes spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
