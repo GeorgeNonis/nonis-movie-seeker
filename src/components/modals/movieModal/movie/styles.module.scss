@@ -21,65 +21,12 @@
   width: 80%;
   height: 80%;
 }
-
-.trailerdiv {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  width: 100%;
-  place-content: center;
-  align-items: center;
-}
-
-.trailerlink {
-  all: unset;
-  cursor: pointer;
-  text-align: center;
-  background-color: #ff1616;
-  border-radius: 25px;
-  padding-block: 1rem;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1rem;
-  font-weight: 700;
-  transition: all 250ms ease-in-out;
-  &:hover {
-    transform: scale(1.08);
-  }
-}
-
-.ratingdiv {
-  display: grid;
-  place-items: center;
-  position: relative;
-}
-
-.rating {
-  position: absolute;
-}
-
-.details {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  margin-block: 2rem;
-  place-items: center;
-  font-weight: 800;
-  width: 100%;
-}
-
 .title {
+  font-size: 23px;
   text-transform: uppercase;
-  letter-spacing: 5px;
   font-weight: 100;
 }
 
 .description {
   font-weight: 100;
-}
-
-.genre {
-  color: #b92f2c;
-  text-wrap: nowrap;
-}
-
-.actions {
 }
