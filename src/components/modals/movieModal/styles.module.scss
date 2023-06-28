@@ -15,8 +15,11 @@
   position: fixed;
   inset: 50% auto auto 50%;
   transform: translate(-50%, -50%);
-  height: 80dvh;
-  width: 70dvw;
+  // width: 806px;
+  width: 806px;
+  min-height: 80dvh;
+  // height: 80dvh;
+  // width: 70dvw;
   background-color: white;
   border: none;
   box-sizing: border-box;
