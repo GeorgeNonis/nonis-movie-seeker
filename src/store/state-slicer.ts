@@ -3,6 +3,8 @@ import { InitialState } from "./interfaces";
 
 const initialState = {
   theme: false,
+  movieModal: false,
+  movie: {},
 } as InitialState;
 
 const state = createSlice({
@@ -12,9 +14,17 @@ const state = createSlice({
     changeTheme(state) {
       state.theme = !state.theme;
     },
+    movieModal(state) {
+      state.movieModal = !state.movieModal;
+    },
+    addMovieDetails(state, { payload }) {
+      const { ...rest } = payload;
+      state.movie = rest;
+      state.movieModal = !state.movieModal;
+    },
   },
 });
 
-export const { changeTheme } = state.actions;
+export const { changeTheme, movieModal, addMovieDetails } = state.actions;
 
 export default state.reducer;

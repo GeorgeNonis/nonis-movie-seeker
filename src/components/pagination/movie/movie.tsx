@@ -1,10 +1,12 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import { MovieProps } from "./interfaces";
+import { useMovie } from "./useMovie";
 
 const Movie = ({ ...rest }: MovieProps) => {
+  const { ModalHandler } = useMovie();
   return (
-    <div className={styles.movie}>
+    <div className={styles.movie} onClick={() => ModalHandler({ ...rest })}>
       <Image
         className={styles.img}
         width={100}

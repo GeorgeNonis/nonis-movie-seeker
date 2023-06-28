@@ -1,0 +1,48 @@
+.backdrop {
+  position: fixed;
+  inset: 0 auto auto 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+  visibility: visible;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 13.9637ms,
+    visibility 0s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modalContent {
+  z-index: 101;
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+  height: 80dvh;
+  width: 70dvw;
+  background-color: white;
+  border: none;
+  box-sizing: border-box;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 60%), 0 4px 8px 3px rgb(0 0 0 / 30%);
+  overflow-x: hidden;
+  overflow-y: auto;
+  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 13.9637ms,
+    visibility 0s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.x {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}

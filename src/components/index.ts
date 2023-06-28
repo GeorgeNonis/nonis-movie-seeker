@@ -1,3 +1,7 @@
+export { default as Modal } from "./modals/modal/modal";
+export { default as MovieModal } from "./modals/movieModal/movieModal";
+export { default as Settings } from "./modals/settings/settings";
+
 export { default as Headercomponent } from "./headercomponent/headercomponent";
 
 export { default as MoviesArraysProvider } from "@/context/moviesarrays/moviesArray";

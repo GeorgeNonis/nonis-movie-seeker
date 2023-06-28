@@ -13,6 +13,12 @@ const HomePage = ({ ...rest }: HomePageProps) => {
     <>
       <Comp.MoviesArraysProvider {...rest}>
         <main className={styles.main}>
+          {/* <Modal>
+            <Comp.Settings />
+          </Modal> */}
+          <Comp.Modal>
+            <Comp.MovieModal />
+          </Comp.Modal>
           <Headercomponent />
           <Comp.Carousel />
           <Comp.MoviePage />
