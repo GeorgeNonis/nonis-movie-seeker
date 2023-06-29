@@ -10,6 +10,7 @@ import Trailer from "./trailer/trailer";
 const Movie = () => {
   const { movie, movieModal } = useSelector((state: IRootState) => state.state);
   if (!movieModal) return null;
+
   return (
     <div className={styles.movie}>
       <Image
@@ -24,7 +25,7 @@ const Movie = () => {
         <p>{movie.description}</p>
         <Trailer {...movie} />
         <Details {...movie} />
-        <Actions />
+        <Actions {...movie} />
       </div>
     </div>
   );

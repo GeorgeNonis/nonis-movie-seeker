@@ -4,10 +4,49 @@ import Starsbackdrop from "@/components/starsbackdrop";
 import styles from "../styles/Home.module.css";
 import Headercomponent from "@/components/headercomponent";
 import { GetStaticProps } from "next";
+import { useEffect } from "react";
 import { HomePageProps, Movie } from "./interfaces";
 import * as Comp from "../components";
 
 const HomePage = ({ ...rest }: HomePageProps) => {
+  useEffect(() => {
+    const getDataBases = async () => {
+      const databases = await window.indexedDB.databases();
+
+      console.log({ databases });
+      return databases;
+    };
+
+    getDataBases()
+      .then((databases) => {
+        const doesItExist = databases.find((db) => db.name === "myMovies");
+        console.log(databases[0]);
+        if (doesItExist) return;
+        const request: IDBOpenDBRequest = indexedDB.open("myMovies", 1);
+
+        request.onupgradeneeded = (event: IDBVersionChangeEvent) => {
+          const db: IDBDatabase = (event.target as IDBOpenDBRequest).result;
+
+          // Create or modify object stores
+          if (!db.objectStoreNames.contains("movies")) {
+            const moviesStore: IDBObjectStore = db.createObjectStore("movies", {
+              keyPath: "id",
+              autoIncrement: true,
+            });
+            moviesStore.createIndex("watchedIndex", "watched", {
+              unique: false,
+            });
+            moviesStore.createIndex("queuedIndex", "queued", { unique: false });
+          }
+
+          // Perform other schema modifications or migrations as needed
+        };
+        console.log(databases);
+      })
+      .catch((error) => {
+        console.log({ error });
+      });
+  }, []);
   console.log(rest.movies);
   return (
     <>

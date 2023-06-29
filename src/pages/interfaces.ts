@@ -19,6 +19,16 @@ export interface Movie {
   year: number;
 }
 
+// interface MoviesSchema  {
+//   watched: Movie[]
+//   queued: Movie[]
+// }
+
+// const movies:MoviesSchema = {
+//   watched: [],
+//   queued: []
+// }
+
 export interface HomePageProps {
   movies: Movie[][];
   twentymovies: Movie[];
