@@ -1,6 +1,6 @@
 import { useDispatch } from "react-redux";
 import { useState } from "react";
-import { changeTheme } from "@/store/state-slicer";
+import { changeTheme } from "@/store/db-slice";
 export const useSwitchButton = () => {
   const dispatch = useDispatch();
 

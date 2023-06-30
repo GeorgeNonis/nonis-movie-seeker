@@ -11,9 +11,9 @@
   letter-spacing: 0.6px;
   font-size: 12px;
   &:hover {
-    border-color: #ff1616;
-    background-color: #ff1616;
-    color: white;
+    border-color: #ff1616 !important;
+    background-color: #ff1616 !important;
+    color: white !important;
   }
 }
 .actions {

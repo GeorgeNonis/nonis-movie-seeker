@@ -1,20 +1,12 @@
+import { Movie } from "@/pages/interfaces";
+
 export interface InitialState {
-  theme: boolean;
   movieModal: boolean;
-  movie: {
-    _id: string;
-    id: string;
-    __v: number;
-    description: string;
-    director: string[];
-    genre: string[];
-    image: [];
-    imdbid: string;
-    rank: number;
-    rating: string;
-    thumbnail: string;
-    title: string;
-    writers: [string];
-    year: number;
-  };
+  movie: Movie;
+}
+
+export interface DBInitialState {
+  theme: boolean;
+  watched: Movie[];
+  queued: Movie[];
 }
