@@ -3,6 +3,7 @@ import { InitialState } from "./interfaces";
 
 const initialState = {
   movieModal: false,
+  libraryModal: false,
   movie: {},
 } as InitialState;
 
@@ -13,6 +14,9 @@ const state = createSlice({
     movieModal(state) {
       state.movieModal = !state.movieModal;
     },
+    libModal(state) {
+      state.libraryModal = !state.libraryModal;
+    },
     addMovieDetails(state, { payload }) {
       const { ...rest } = payload;
       state.movie = rest;
@@ -21,6 +25,6 @@ const state = createSlice({
   },
 });
 
-export const { movieModal, addMovieDetails } = state.actions;
+export const { movieModal, addMovieDetails, libModal } = state.actions;
 
 export default state.reducer;

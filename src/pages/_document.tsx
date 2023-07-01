@@ -7,6 +7,7 @@ export default function Document() {
       <body>
         <div id="settings"></div>
         <div id="movie_modal"></div>
+        <div id="lib_modal"></div>
 
         <Main />
         <NextScript />

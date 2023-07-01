@@ -1,6 +1,6 @@
 import { Movie } from "@/pages/interfaces";
-import styles from "./styles.module.scss";
 import { useActions } from "./useActions";
+import styles from "./styles.module.scss";
 
 const Actions = ({ ...movie }: Movie) => {
   const { watchedHandler, queueHandler, values } = useActions({ ...movie });
@@ -12,7 +12,6 @@ const Actions = ({ ...movie }: Movie) => {
         onClick={watchedHandler}
       >
         {values.watched ? "Watched" : "Add to Watched"}
-        {/* {values.hasMovieBeenWatched ? "Watched" : "Add to Watched"} */}
       </button>
       <button
         className={styles.btn}

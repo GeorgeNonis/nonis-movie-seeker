@@ -1,35 +1,17 @@
-import axios from "axios";
 import data from "../../data.json";
-import Starsbackdrop from "@/components/starsbackdrop";
 import styles from "../styles/Home.module.css";
-import Headercomponent from "@/components/headercomponent";
 import { GetStaticProps } from "next";
-import { useEffect } from "react";
 import { HomePageProps, Movie } from "./interfaces";
 import * as Comp from "../components";
 import { useHomePage } from "./hooks/useHomePage";
 
 const HomePage = ({ ...rest }: HomePageProps) => {
-  useHomePage();
+  useHomePage({ ...rest });
   return (
     <>
-      <Comp.MoviesArraysProvider {...rest}>
-        <main className={styles.main}>
-          {/* <Modal>
-            <Comp.Settings />
-          </Modal> */}
-          <Comp.Modal>
-            <Comp.MovieModal />
-          </Comp.Modal>
-          <Headercomponent />
-          <Comp.Carousel />
-          <Comp.MoviePage />
-          <Comp.ScrollToTop />
-          <Comp.Techonologies />
-          <Comp.Footer />
-        </main>
-      </Comp.MoviesArraysProvider>
-      <Starsbackdrop />
+      <main className={styles.main}>
+        <Comp.MoviePage />
+      </main>
     </>
   );
 };

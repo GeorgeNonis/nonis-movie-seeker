@@ -1,4 +1,3 @@
-import { ReactNode } from "react";
 import { HomePageProps, Movie } from "@/pages/interfaces";
 
 export interface ContextValues {

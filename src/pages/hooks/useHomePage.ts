@@ -1,14 +1,16 @@
-import { setDatabaseMovies } from "@/store/db-slice";
+import { setDatabaseMovies, setInitialMovies } from "@/store/db-slice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { DB, MOVIES_DB } from "../../../config";
 import { ParseHandler, StringifyHandler } from "./utils";
 import { IRootState } from "@/store";
+import { HomePageProps } from "../interfaces";
 
-export const useHomePage = () => {
+export const useHomePage = ({ ...Movies }: HomePageProps) => {
   const { ...rest } = useSelector((state: IRootState) => state.DATABASE);
   const dispatch = useDispatch();
   useEffect(() => {
+    dispatch(setInitialMovies({ ...Movies }));
     const moviesStorage = localStorage.getItem(DB);
 
     if (!moviesStorage) {
@@ -18,7 +20,7 @@ export const useHomePage = () => {
     } else {
       dispatch(setDatabaseMovies(ParseHandler(moviesStorage)));
     }
-  }, [dispatch]);
+  }, []);
 
   const values = {
     ...rest,

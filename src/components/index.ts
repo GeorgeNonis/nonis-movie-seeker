@@ -1,3 +1,7 @@
+export { default as LibraryModal } from "./modals/myLibrary";
+
+export { default as Movie } from "./pagination/movie/movie";
+
 export { default as Modal } from "./modals/modal/modal";
 export { default as MovieModal } from "./modals/movieModal/movieModal";
 export { default as Settings } from "./modals/settings/settings";

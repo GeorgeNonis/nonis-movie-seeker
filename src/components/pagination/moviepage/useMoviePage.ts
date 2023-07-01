@@ -1,9 +1,9 @@
-import { MoviesArrays } from "@/context/moviesarrays/moviesArray";
-import { useContext } from "react";
+import { IRootState } from "@/store";
 import { useState } from "react";
+import { useSelector } from "react-redux";
 
 export const useMoviePage = () => {
-  const { movies } = useContext(MoviesArrays);
+  const { movies } = useSelector((state: IRootState) => state.DATABASE);
   const [page, setPage] = useState(0);
 
   const enabled = (pageNumber: number, number: number) => {

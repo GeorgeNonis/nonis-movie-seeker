@@ -1,6 +1,5 @@
 import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
-import Image from "next/image";
-import { useCustomCarousel } from "./useCustomCarouel";
+import { useCustomCarousel } from "./useCustomCarousel";
 import styles from "./styles.module.scss";
 import Img from "./img/img";
 

@@ -1,13 +1,19 @@
-import { MoviesArrays } from "@/context/moviesarrays/moviesArray";
 import { useContext } from "react";
-import { MovieSectionProps } from "./interfaces";
-import Movie from "../../movie/movie";
+import Movie from "../../movie";
 import styles from "./styles.module.scss";
 import { MoviesSection } from "@/context/moviesections/moviesSection";
+import { useSelector } from "react-redux";
+import { IRootState } from "@/store";
+import LoadingSpinner from "@/components/laoadingspinner/loadingspinner";
 
 const MovieSection = () => {
-  const { movies } = useContext(MoviesArrays);
+  const { movies } = useSelector((state: IRootState) => state.DATABASE);
   const { page } = useContext(MoviesSection);
+
+  if (!movies || !movies[page]) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <div className={styles.moviesection}>
       {movies[page].map((movie, index) => {

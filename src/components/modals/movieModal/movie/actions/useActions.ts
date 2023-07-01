@@ -10,9 +10,9 @@ import {
 } from "@/store/db-slice";
 
 export const useActions = ({ ...movieDetails }: Movie) => {
-  const { ...rest } = useSelector((state: IRootState) => state.DATABASE);
   const dispatch = useDispatch();
-
+  const { ...rest } = useSelector((state: IRootState) => state.DATABASE);
+  console.log(rest.watched);
   const watched = rest.watched.find((movie) => movie._id === movieDetails._id);
   const queued = rest.queued.find((movie) => movie._id === movieDetails._id);
 

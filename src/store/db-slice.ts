@@ -6,12 +6,19 @@ const initialState = {
   theme: false,
   queued: [],
   watched: [],
+  movies: [],
+  twentymovies: [],
 } as DBInitialState;
 
 const DATABASAE = createSlice({
   name: "DATABASE",
   initialState,
   reducers: {
+    setInitialMovies(state, { payload }) {
+      const { movies, twentymovies } = payload;
+      state.movies = [...movies];
+      state.twentymovies = [...twentymovies];
+    },
     setDatabaseMovies(state, { payload }) {
       const { theme, watched, queued } = payload;
       (state.theme = theme), (state.watched = watched), (state.queued = queued);
@@ -24,7 +31,7 @@ const DATABASAE = createSlice({
     },
     removeMovieWatchList(state, { payload }) {
       const { id } = payload;
-      state.watched = [...state.watched.filter((movie) => movie.id !== id)];
+      state.watched = [...state.watched.filter((movie) => movie._id !== id)];
       localStorageMiddleware({ ...state });
     },
     addMovieQueueList(state, { payload }) {
@@ -34,7 +41,7 @@ const DATABASAE = createSlice({
     },
     removeMovieQueueList(state, { payload }) {
       const { id } = payload;
-      state.queued = [...state.queued.filter((movie) => movie.id !== id)];
+      state.queued = [...state.queued.filter((movie) => movie._id !== id)];
       localStorageMiddleware({ ...state });
     },
     changeTheme(state) {
@@ -45,6 +52,7 @@ const DATABASAE = createSlice({
 });
 
 export const {
+  setInitialMovies,
   setDatabaseMovies,
   addMovieWatchList,
   removeMovieWatchList,
