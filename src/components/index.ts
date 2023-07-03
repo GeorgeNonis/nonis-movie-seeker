@@ -1,13 +1,9 @@
-export { default as LibraryModal } from "./modals/myLibrary";
-
+export { default as Library } from "./headercomponent/library";
 export { default as Movie } from "./pagination/movie/movie";
-
 export { default as Modal } from "./modals/modal/modal";
 export { default as MovieModal } from "./modals/movieModal/movieModal";
-export { default as Settings } from "./modals/settings/settings";
-
+export { default as SettingsModal } from "./modals/settingsModal/settings";
 export { default as Headercomponent } from "./headercomponent/headercomponent";
-
 export { default as MoviesArraysProvider } from "@/context/moviesarrays/moviesArray";
 export { default as Footer } from "./footer/footer";
 export { default as ScrollToTop } from "./scrollToTop/ScrollToTop";

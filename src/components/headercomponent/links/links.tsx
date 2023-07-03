@@ -1,16 +1,20 @@
 import Link from "next/link";
 import styles from "./styles.module.scss";
+import { useLinks } from "./useLinks";
+import { LINKS } from "../../../../config";
 
 const Links = () => {
-  const links = [
-    { link: "Home", value: "/" },
-    { link: "My Library", value: "/library" },
-  ];
+  const { activeLink, pathname } = useLinks();
   return (
     <>
-      {links.map((link, i) => {
+      {LINKS.map((link, i) => {
         return (
-          <Link href={link.value} className={styles.link} key={i}>
+          <Link
+            href={link.value}
+            className={styles.link}
+            key={i}
+            style={pathname === link.value ? activeLink : undefined}
+          >
             {link.link}
           </Link>
         );

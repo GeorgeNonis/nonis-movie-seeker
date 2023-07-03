@@ -1,7 +1,9 @@
+import { LibraryMovies } from "@/components/modals/myLibrary/options";
 import { useLibrary } from "./useLibrary";
 
-const Library = (props: any) => {
+const Library = () => {
   useLibrary();
-  return <h1>Library</h1>;
+
+  return <LibraryMovies />;
 };
 export default Library;

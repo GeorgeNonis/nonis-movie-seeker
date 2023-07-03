@@ -9,6 +9,7 @@ const Headercomponent = () => {
           <Comp.SearchDiv />
           <Comp.Links />
         </div>
+        <Comp.Library />
         <div className={styles.library}></div>
       </div>
       <div className={styles.secondrow}>

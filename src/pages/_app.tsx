@@ -12,7 +12,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Comp.MovieModal />
       </Comp.Modal>
       <Comp.Modal>
-        <Comp.LibraryModal />
+        <Comp.SettingsModal />
       </Comp.Modal>
       <Comp.Headercomponent />
       <Comp.Carousel />

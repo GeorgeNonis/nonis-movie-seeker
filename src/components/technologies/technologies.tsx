@@ -1,13 +1,15 @@
-import Image from "next/image";
+import { FiSettings } from "react-icons/fi";
+import { useTechnologies } from "./useTechnologies";
 import styles from "./styles.module.scss";
 
-import { FiSettings } from "react-icons/fi";
+const Technologies = () => {
+  const { onClickHandler } = useTechnologies();
 
-const Techonologies = () => {
   return (
-    <div className={styles.div}>
+    <div className={styles.div} onClick={onClickHandler}>
       <FiSettings className={styles.svg} />
     </div>
   );
 };
-export default Techonologies;
+
+export default Technologies;

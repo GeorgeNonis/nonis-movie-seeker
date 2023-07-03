@@ -2,7 +2,9 @@ import { Movie } from "@/pages/interfaces";
 
 export interface InitialState {
   movieModal: boolean;
+  settingsModal: boolean;
   libraryModal: boolean;
+  watched: boolean;
   movie: Movie;
 }
 
