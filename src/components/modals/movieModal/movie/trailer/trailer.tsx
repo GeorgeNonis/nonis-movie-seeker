@@ -1,24 +1,59 @@
+import { styled } from "@stitches/react";
 import { Movie } from "@/pages/interfaces";
 import Rating from "../rating/rating";
-import styles from "./styles.module.scss";
+
+const TrailerContainer = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "1fr 1fr",
+  width: "100%",
+  placeContent: "center",
+  alignItems: "center",
+});
+
+const TrailerLink = styled("a", {
+  all: "unset",
+  cursor: "pointer",
+  textAlign: "center",
+  backgroundColor: "#ff1616",
+  borderRadius: "25px",
+  paddingBlock: "1rem",
+  color: "white",
+  textTransform: "uppercase",
+  fontSize: "1rem",
+  fontWeight: "700",
+  transition: "all 250ms ease-in-out",
+  "&:hover": {
+    transform: "scale(1.08)",
+  },
+});
+
+const RatingContainer = styled("div", {
+  display: "grid",
+  placeItems: "center",
+  position: "relative",
+});
+
+const RatingText = styled("h3", {
+  position: "absolute",
+});
 
 const Trailer = ({ ...movie }: Movie) => {
   return (
-    <div className={styles.trailerdiv}>
-      <a
-        className={styles.trailerlink}
+    <TrailerContainer>
+      <TrailerLink
         href={`https://www.youtube.com/results?search_query=${movie.title.split(
           "+"
         )}+trailer`}
         target="_blank"
       >
         Watch Trailer
-      </a>
-      <div className={styles.ratingdiv}>
+      </TrailerLink>
+      <RatingContainer>
         <Rating percentage={String(+movie.rating * 10)} />
-        <h3 className={styles.rating}>{movie.rating}</h3>
-      </div>
-    </div>
+        <RatingText>{movie.rating}</RatingText>
+      </RatingContainer>
+    </TrailerContainer>
   );
 };
+
 export default Trailer;

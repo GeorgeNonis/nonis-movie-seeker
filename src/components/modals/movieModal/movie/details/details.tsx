@@ -1,13 +1,28 @@
+import { styled } from "@stitches/react";
 import { Movie } from "@/pages/interfaces";
-import styles from "./styles.module.scss";
+
+const DetailsContainer = styled("div", {
+  display: "grid",
+  gridTemplateColumns: "repeat(3, 1fr)",
+  marginBlock: "2rem",
+  placeItems: "center",
+  fontWeight: "800",
+  width: "100%",
+});
+
+const Genre = styled("span", {
+  color: "#b92f2c",
+  whiteSpace: "nowrap",
+});
 
 const Details = ({ ...movie }: Movie) => {
   return (
-    <div className={styles.details}>
+    <DetailsContainer>
       <span>{movie.year}</span>
       <span>No {movie.rank}</span>
-      <span className={styles.genre}>{movie.genre.join(" | ")}</span>
-    </div>
+      <Genre>{movie.genre.join(" | ")}</Genre>
+    </DetailsContainer>
   );
 };
+
 export default Details;

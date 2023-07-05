@@ -1,6 +1,6 @@
+import { styled } from "@stitches/react";
 import { useContext } from "react";
 import Movie from "../../movie";
-import styles from "./styles.module.scss";
 import { MoviesSection } from "@/context/moviesections/moviesSection";
 import { useSelector } from "react-redux";
 import { IRootState } from "@/store";
@@ -14,12 +14,21 @@ const MovieSection = () => {
     return <LoadingSpinner />;
   }
 
+  const Section = styled("div", {
+    width: "100%",
+    margin: "5rem auto",
+    display: "grid",
+    gridTemplateColumns: "repeat(2, 1fr)",
+    gap: "2rem",
+    placeItems: "center",
+  });
+
   return (
-    <div className={styles.moviesection}>
+    <Section>
       {movies[page].map((movie, index) => {
         return <Movie {...movie} key={index} />;
       })}
-    </div>
+    </Section>
   );
 };
 export default MovieSection;
