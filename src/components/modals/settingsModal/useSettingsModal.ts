@@ -1,8 +1,10 @@
 import { settingsModal } from "@/store/state-slicer";
+import { css } from "@stitches/react";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "@/store";
 import styles from "./styles.module.scss";
 import fallingStars from "./fallingstars.module.scss";
+import { Backdrop } from "./styles";
 
 export const useSettingsModal = () => {
   const { settingsModal: settingsModalState } = useSelector(
@@ -10,12 +12,9 @@ export const useSettingsModal = () => {
   );
   const dispatch = useDispatch();
 
-  const backdrop = settingsModalState
-    ? `${styles.backdrop} ${styles.visible}`
-    : `${styles.backdrop} ${styles.hidden}`;
   const modalContent = settingsModalState
     ? `${styles.modalContent} ${styles.visible} ${fallingStars["falling-stars"]}`
-    : `${styles.backdrop} ${styles.hidden}`;
+    : `${styles.hidden}`;
 
   const ModalHandler = () => {
     console.log("clicking");
@@ -26,8 +25,8 @@ export const useSettingsModal = () => {
 
   return {
     ModalHandler,
-    backdrop,
     modalContent,
     stars,
+    settingsModalState,
   };
 };

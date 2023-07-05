@@ -10,10 +10,10 @@ const MovieModal = () => {
   const { ModalHandler } = useMovieModal();
   const backdrop = movieModal
     ? `${styles.backdrop} ${styles.visible}`
-    : `${styles.backdrop} ${styles.hidden}`;
+    : `${styles.hidden}`;
   const modalContent = movieModal
     ? `${styles.modalContent} ${styles.visible}`
-    : `${styles.backdrop} ${styles.hidden}`;
+    : `${styles.hidden}`;
   return (
     <>
       <div className={backdrop} onClick={ModalHandler}></div>

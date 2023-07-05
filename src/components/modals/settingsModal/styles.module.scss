@@ -1,15 +1,3 @@
-.backdrop {
-  position: fixed;
-  inset: 0 auto auto 0;
-  z-index: 100;
-  width: 100vw;
-  height: 100vh;
-  visibility: visible;
-  background-color: rgba(0, 0, 0, 0.2);
-  transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 13.9637ms,
-    visibility 0s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
 .modalContent {
   z-index: 101;
   position: fixed;
@@ -56,47 +44,4 @@
 .visible {
   opacity: 1;
   visibility: visible;
-}
-
-.x {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  height: 2rem;
-  width: 2rem;
-}
-
-.title {
-  text-align: center;
-  margin-block: 1rem;
-  font-family: none;
-}
-
-.img {
-  margin-inline: 5px;
-}
-
-.infoSection {
-  font-family: monospace;
-  display: grid;
-  gap: 0.5rem;
-  margin-block: 0.5rem;
-  background-color: #50505042;
-  padding: 10px;
-  border-radius: 8px;
-}
-
-.techStack {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1rem;
-  margin-block: 0.5rem;
-  margin-inline: auto;
-}
-
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 3rem;
 }

@@ -1,7 +1,6 @@
 import { IRootState } from "@/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
-import Rating from "./rating";
 import styles from "./styles.module.scss";
 import Details from "./details";
 import Actions from "./actions/actions";
