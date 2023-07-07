@@ -1,7 +1,8 @@
 import { useSettingsModal } from "./useSettingsModal";
 import fallingStars from "./fallingstars.module.scss";
 import * as Comp from "./info";
-import { Backdrop, Night, Title, XMark, Content } from "./styles";
+import { Backdrop, Night, Content } from "./styles";
+import { Title, XMark } from "@/components/Atoms";
 
 const SettingsModal = () => {
   const { ModalHandler, modalContent, stars, settingsModalState } =
@@ -17,7 +18,9 @@ const SettingsModal = () => {
           return <div className={fallingStars["shooting_star"]} key={i}></div>;
         })}
         <Content>
-          <Title>Tech Stack that has been used for this project</Title>
+          <Title marginBlock={"1"}>
+            Tech Stack that has been used for this project
+          </Title>
           <Comp.Developer />
           <Comp.Contact />
           <Comp.Stack />

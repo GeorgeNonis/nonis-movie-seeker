@@ -3,19 +3,7 @@ import Greece from "public/flags/greece1.png";
 import denmark from "public/flags/denmark.png";
 import styles from "./styles.module.scss";
 import Image from "next/image";
-
-const Section = styled("section", {
-  fontFamily: "monospace",
-  display: "grid",
-  gap: "0.5rem",
-  marginBlock: "0.5rem",
-  backgroundColor: "#50505042",
-  padding: "10px",
-  borderRadius: "8px",
-});
-
-const Title = styled("h3", {});
-const Paragraph = styled("p", {});
+import { Paragraph, Section, Title } from "@/components/Atoms";
 
 const Developer = () => {
   return (

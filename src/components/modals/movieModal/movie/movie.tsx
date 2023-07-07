@@ -3,9 +3,8 @@ import { styled } from "@stitches/react";
 import { IRootState } from "@/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
-import Details from "./details";
-import Actions from "./actions/actions";
-import Trailer from "./trailer/trailer";
+import * as Comp from "../index";
+import { Title } from "@/components/Atoms";
 
 const MovieContainer = styled("div", {
   display: "grid",
@@ -27,10 +26,9 @@ const MovieDetails = styled("div", {
   paddingRight: "2rem",
 });
 
-const MovieTitle = styled("h1", {
-  fontSize: "23px",
-  textTransform: "uppercase",
-  fontWeight: "100",
+const MovieImage = styled(Image, {
+  width: "80%",
+  height: "80%",
 });
 
 const Movie = () => {
@@ -39,19 +37,26 @@ const Movie = () => {
 
   return (
     <MovieContainer>
-      <Image
-        className={styles.img}
+      <MovieImage
         width={500}
         height={500}
         src={movie.image[movie.image.length - 1][1]}
         alt={movie.title}
       />
       <MovieDetails>
-        <MovieTitle>{movie.title}</MovieTitle>
+        <Title
+          fontSize={"4"}
+          textTransform={"uppercase"}
+          fontWeight={"light"}
+          colors={"black"}
+        >
+          {movie.title}
+        </Title>
+
         <p>{movie.description}</p>
-        <Trailer {...movie} />
-        <Details {...movie} />
-        <Actions {...movie} />
+        <Comp.Trailer {...movie} />
+        <Comp.Details {...movie} />
+        <Comp.Actions {...movie} />
       </MovieDetails>
     </MovieContainer>
   );

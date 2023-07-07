@@ -1,21 +1,7 @@
-import { styled } from "@stitches/react";
 import { CONTACT_INFORMATION } from "../../../../../../config";
+import { Paragraph, Section, Title } from "@/components/Atoms";
 
 const Contact = () => {
-  const Section = styled("section", {
-    fontFamily: "monospace",
-    display: "grid",
-    gap: "0.5rem",
-    marginBlock: "0.5rem",
-    backgroundColor: "#50505042",
-    padding: "10px",
-    borderRadius: "8px",
-  });
-
-  const Title = styled("h3", {});
-
-  const Paragraph = styled("p", {});
-
   return (
     <Section>
       <Title>Contact Information</Title>

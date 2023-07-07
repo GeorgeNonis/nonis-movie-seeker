@@ -1,28 +1,39 @@
-import { useRouter } from "next/router";
-import styles from "./styles.module.scss";
+import { sharedProperties, styled } from "../../../../stitches.config";
 import useLibrary from "./useLibrary";
 
+const Button = styled("button", {
+  ...sharedProperties,
+  width: "5rem",
+  variants: {
+    enabled: {
+      true: {
+        backgroundColor: "$secondary",
+        color: "white",
+      },
+    },
+  },
+});
+
+const Container = styled("div", {
+  display: "grid",
+  gridAutoFlow: "column",
+  justifyContent: "flex-end",
+  gap: "1rem",
+});
+
 const Library = () => {
-  const { library, watchedStyle, queueStyle, onClickHandler } = useLibrary();
+  const { library, watched, onClickHandler } = useLibrary();
 
   if (!library) return null;
   return (
-    <div className={styles.library}>
-      <button
-        className={styles.btn}
-        onClick={onClickHandler}
-        style={watchedStyle}
-      >
+    <Container>
+      <Button onClick={onClickHandler} enabled={watched ? "true" : undefined}>
         WATCHED
-      </button>
-      <button
-        className={styles.btn}
-        onClick={onClickHandler}
-        style={queueStyle}
-      >
+      </Button>
+      <Button enabled={!watched ? "true" : undefined} onClick={onClickHandler}>
         QUEUE
-      </button>
-    </div>
+      </Button>
+    </Container>
   );
 };
 export default Library;

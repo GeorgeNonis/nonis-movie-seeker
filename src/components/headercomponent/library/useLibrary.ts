@@ -9,13 +9,6 @@ export const useLibrary = () => {
   const { pathname } = useRouter();
   const library = pathname === "/library";
 
-  const watchedStyle = watched
-    ? { background: "#b92f2c", color: "white" }
-    : undefined;
-  const queueStyle = !watched
-    ? { background: "#b92f2c", color: "white" }
-    : undefined;
-
   const onClickHandler = () => {
     dispatch(switchWatched());
   };
@@ -24,8 +17,6 @@ export const useLibrary = () => {
     onClickHandler,
     library,
     watched,
-    watchedStyle,
-    queueStyle,
   };
 };
 export default useLibrary;

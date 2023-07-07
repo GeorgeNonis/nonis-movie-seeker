@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { styled } from "../../../stitches.config";
+import { Title } from "../Atoms";
 
 const Footer = () => {
   const Footer = styled("footer", {
@@ -13,10 +14,6 @@ const Footer = () => {
     gap: "1rem",
     background: "rgba(88, 88, 88, 0.19)",
     gridAutoFlow: "column",
-  });
-
-  const H3 = styled("h3", {
-    color: "White",
   });
 
   const Link = styled("a", {
@@ -36,12 +33,12 @@ const Footer = () => {
       >
         <Image src={"/github.png"} width={50} height={50} alt="github_logo" />
       </a>
-      <H3>
+      <Title>
         Develop By{" "}
         <Link href="https://giorgosnonis.com/" target="_blank">
           Giorgos Nonis
         </Link>
-      </H3>
+      </Title>
     </Footer>
   );
 };

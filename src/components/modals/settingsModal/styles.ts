@@ -60,19 +60,6 @@ const ModalContent = styled("div", {
   },
 });
 
-const XMark = styled(HiXMark, {
-  position: "absolute",
-  top: "1rem",
-  right: "1rem",
-  cursor: "pointer",
-  height: "2rem",
-  width: "2rem",
-  // Playing around with media's
-  // "@bp3": {
-  //   cursor: "not-allowed",
-  // },
-});
-
 const sky = keyframes({
   "0%": {
     transform: "rotate(45deg)",
@@ -89,12 +76,6 @@ const Night = styled("div", {
   animation: `${sky} 200000ms linear infinite`,
 });
 
-const Title = styled("h2", {
-  textAlign: "center",
-  marginBlock: "1rem",
-  fontFamily: "none",
-});
-
 const Content = styled("div", {});
 
-export { Backdrop, ModalContent, XMark, Night, Title, Content };
+export { Backdrop, ModalContent, Night, Content };

@@ -1,6 +1,5 @@
 import Switch from "react-switch";
 import { useSwitchButton } from "./useSwitchButton";
-import styles from "./styles.module.scss";
 
 const SwitchButton = () => {
   const { theme, SwitchHandler } = useSwitchButton();

@@ -1,7 +1,11 @@
 import Link from "next/link";
-import styles from "./styles.module.scss";
 import { useLinks } from "./useLinks";
 import { LINKS } from "../../../../config";
+import { sharedProperties, styled } from "../../../../stitches.config";
+
+const NavLink = styled(Link, {
+  ...sharedProperties,
+});
 
 const Links = () => {
   const { activeLink, pathname } = useLinks();
@@ -9,14 +13,13 @@ const Links = () => {
     <>
       {LINKS.map((link, i) => {
         return (
-          <Link
+          <NavLink
             href={link.value}
-            className={styles.link}
             key={i}
             style={pathname === link.value ? activeLink : undefined}
           >
             {link.link}
-          </Link>
+          </NavLink>
         );
       })}
     </>

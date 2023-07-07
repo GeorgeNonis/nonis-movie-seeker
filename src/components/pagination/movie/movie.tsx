@@ -2,6 +2,7 @@ import { styled } from "@stitches/react";
 import Image from "next/image";
 import { MovieProps } from "./interfaces";
 import { useMovie } from "./useMovie";
+import { Title } from "@/components/Atoms";
 
 const MovieContainer = styled("div", {
   cursor: "pointer",
@@ -26,13 +27,6 @@ const MovieImage = styled(Image, {
   objectFit: "contain",
 });
 
-const MovieTitleWriters = styled("h3", {
-  textTransform: "uppercase",
-  color: "white",
-  fontWeight: "100",
-  fontSize: "0.8rem",
-});
-
 const MovieGenreYear = styled("h3", {
   fontSize: "0.8rem",
   fontWeight: "100",
@@ -50,9 +44,9 @@ const Movie = ({ ...rest }: MovieProps) => {
         alt={rest.title}
         src={rest.image[rest.image.length - 1][1]}
       />
-      <MovieTitleWriters>
+      <Title fontWeight={"light"}>
         {rest.title} | {rest.rating}
-      </MovieTitleWriters>
+      </Title>
       <MovieGenreYear>
         {rest.genre} | {rest.year}
       </MovieGenreYear>

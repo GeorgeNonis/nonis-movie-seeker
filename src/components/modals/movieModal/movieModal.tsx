@@ -1,34 +1,10 @@
 import { useSelector } from "react-redux";
 import { useMovieModal } from "./useMovieModal";
 import { IRootState } from "@/store";
-import { HiXMark } from "react-icons/hi2";
 import Movie from "./movie/movie";
 import { styled } from "@stitches/react";
-
-const Backdrop = styled("div", {
-  position: "fixed",
-  inset: "0 auto auto 0",
-  zIndex: 100,
-  width: "100vw",
-  height: "100vh",
-  visibility: "visible",
-  backgroundColor: "rgba(0, 0, 0, 0.2)",
-  transition:
-    "opacity 500ms cubic-bezier(0.4, 0, 0.2, 1) 13.9637ms, visibility 0s cubic-bezier(0.4, 0, 0.2, 1)",
-
-  variants: {
-    visible: {
-      true: {
-        opacity: 1,
-        visibility: "visible",
-      },
-      false: {
-        opacity: 0,
-        visibility: "hidden",
-      },
-    },
-  },
-});
+import { Backdrop } from "../settingsModal/styles";
+import { XMark } from "@/components/Atoms";
 
 const ModalContent = styled("div", {
   zIndex: 101,
@@ -59,15 +35,6 @@ const ModalContent = styled("div", {
       },
     },
   },
-});
-
-const XMark = styled(HiXMark, {
-  position: "absolute",
-  top: "1rem",
-  right: "1rem",
-  cursor: "pointer",
-  height: "2rem",
-  width: "2rem",
 });
 
 const MovieModal = () => {
