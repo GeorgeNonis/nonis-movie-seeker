@@ -4,11 +4,19 @@ import { GetStaticProps } from "next";
 import { HomePageProps, Movie } from "./interfaces";
 import * as Comp from "../components";
 import { useHomePage } from "./hooks/useHomePage";
+import Head from "next/head";
 
 const HomePage = ({ ...rest }: HomePageProps) => {
   useHomePage({ ...rest });
   return (
     <>
+      <Head>
+        <meta
+          name="description"
+          content="Web app to search movies from top 100 of IMDB"
+        />
+        <title>Nonis - Movie Seeker</title>
+      </Head>
       <main className={styles.main}>
         <Comp.MoviePage />
       </main>

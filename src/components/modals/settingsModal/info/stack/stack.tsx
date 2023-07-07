@@ -1,6 +1,7 @@
 import { styled } from "@stitches/react";
 import { TECH_STACK } from "../../../../../../config";
 import Image from "next/image";
+import StitchesLogo from "./stitches/stitches";
 
 const Stack = () => {
   const Section = styled("section", {
@@ -38,6 +39,7 @@ const Stack = () => {
             />
           );
         })}
+        <StitchesLogo />
       </TechStackDiv>
     </Section>
   );

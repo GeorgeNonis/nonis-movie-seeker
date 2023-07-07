@@ -1,5 +1,6 @@
 import { HiXMark } from "react-icons/hi2";
-import { keyframes, styled } from "@stitches/react";
+import { keyframes } from "@stitches/react";
+import { styled } from "../../../../stitches.config";
 
 const Backdrop = styled("div", {
   position: "fixed",
@@ -66,6 +67,10 @@ const XMark = styled(HiXMark, {
   cursor: "pointer",
   height: "2rem",
   width: "2rem",
+  // Playing around with media's
+  // "@bp3": {
+  //   cursor: "not-allowed",
+  // },
 });
 
 const sky = keyframes({

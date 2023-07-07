@@ -56,7 +56,7 @@ Next.js and explore its features and capabilities.`,
 practices in front-end development, including efficient component
 architecture, responsive design, and optimized performance. I also
 incorporated modern tools and libraries such as TypeScript, Redux,
-and SASS to ensure a robust and scalable codebase.`,
+and React-Stitches to ensure a robust and scalable codebase.`,
   `The project showcases my ability to build interactive and
 user-friendly web applications, leveraging the power of Next.js
 and the selected tech stack. I have utilized industry-standard

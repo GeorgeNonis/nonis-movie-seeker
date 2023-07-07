@@ -1,5 +1,5 @@
-import { styled } from "@stitches/react";
 import Image from "next/image";
+import { styled } from "../../../stitches.config";
 
 const Footer = () => {
   const Footer = styled("footer", {

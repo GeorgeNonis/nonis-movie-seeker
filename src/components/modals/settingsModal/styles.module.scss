@@ -37,6 +37,9 @@
 }
 
 .hidden {
+  position: fixed;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
 }
