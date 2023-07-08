@@ -1,5 +1,5 @@
 import { Movie } from "@/pages/interfaces";
-import { addMovieDetails, movieModal } from "@/store/state-slicer";
+import { addMovieDetails } from "@/store/state-slicer";
 import { useDispatch } from "react-redux";
 
 export const useImg = () => {

@@ -5,6 +5,17 @@ export const Paragraph = styled("h1", {
   color: "white",
   fontSize: "$6",
   variants: {
+    textAlign: {
+      center: {
+        textAlign: "center",
+      },
+      end: {
+        textAlign: "end",
+      },
+      start: {
+        textAlign: "start",
+      },
+    },
     textTransform: {
       uppercase: {
         textTransform: "uppercase",

@@ -6,6 +6,7 @@ export interface InitialState {
   libraryModal: boolean;
   watched: boolean;
   movie: Movie;
+  resultMovies: Movie[];
 }
 
 export interface DBInitialState {

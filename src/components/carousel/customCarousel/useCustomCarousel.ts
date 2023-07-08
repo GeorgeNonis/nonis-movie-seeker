@@ -3,16 +3,14 @@ import { useSelector } from "react-redux";
 import { IRootState } from "@/store";
 
 export const useCustomCarousel = () => {
-  const { twentymovies, movies } = useSelector(
-    (state: IRootState) => state.DATABASE
-  );
+  const { twentymovies } = useSelector(({ DATABASE }: IRootState) => DATABASE);
   const [translateX, setTranslateX] = useState(0);
   const viewportRef = useRef<HTMLDivElement>(null);
   const testRef = useRef<HTMLDivElement>(null);
 
   const carouselItemWidth = 240;
-  const numItems = 20.7;
-  const totalWidth = carouselItemWidth * numItems;
+  const totalItems = 20.7;
+  const totalWidth = carouselItemWidth * totalItems;
 
   const LeftArrowHandler = () => {
     const remaining = totalWidth - viewportRef.current?.offsetWidth!;
@@ -43,13 +41,13 @@ export const useCustomCarousel = () => {
   // console.log({ number });
   const RightArrowHandler = () => {
     const remaining = totalWidth - viewportRef.current?.offsetWidth!;
-    const deadend = +translateX.toString().split("-")[1] >= remaining;
+    const isDeadend = +translateX.toString().split("-")[1] >= remaining;
     const left = remaining - +translateX.toString().split("-")[1];
 
     if (left < 216) {
       return setTranslateX(translateX - left);
     }
-    if (deadend) return;
+    if (isDeadend) return;
     setTranslateX(translateX - 240);
   };
 

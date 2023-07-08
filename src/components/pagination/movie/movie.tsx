@@ -3,6 +3,8 @@ import Image from "next/image";
 import { MovieProps } from "./interfaces";
 import { useMovie } from "./useMovie";
 import { Title } from "@/components/Atoms";
+import { useRouter } from "next/router";
+import LoadingSpinner from "@/components/laoadingspinner/loadingspinner";
 
 const MovieContainer = styled("div", {
   cursor: "pointer",
@@ -35,7 +37,12 @@ const MovieGenreYear = styled("h3", {
 });
 
 const Movie = ({ ...rest }: MovieProps) => {
-  const { ModalHandler } = useMovie();
+  const { ModalHandler } = useMovie({ ...rest });
+
+  if (!rest || !rest.image || rest.image.length === 0) {
+    return <LoadingSpinner />;
+  }
+
   return (
     <MovieContainer onClick={() => ModalHandler({ ...rest })}>
       <MovieImage

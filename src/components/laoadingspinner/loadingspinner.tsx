@@ -32,6 +32,9 @@ const spinnerTwo = keyframes({
 });
 
 const SpinnerContainer = styled("div", {
+  position: "absolute",
+  inset: "50% auto auto 50%",
+  transform: "translate(-50%,-50%)",
   minWidth: "960px",
   margin: "200px auto",
   display: "flex",

@@ -1,10 +1,8 @@
 import { settingsModal } from "@/store/state-slicer";
-import { css } from "@stitches/react";
 import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "@/store";
 import styles from "./styles.module.scss";
 import fallingStars from "./fallingstars.module.scss";
-import { Backdrop } from "./styles";
 
 export const useSettingsModal = () => {
   const { settingsModal: settingsModalState } = useSelector(

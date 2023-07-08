@@ -12,7 +12,7 @@ const Developer = () => {
   return (
     <Section>
       <Title>Developer Information</Title>
-      <Paragraph>
+      <Paragraph textAlign={"start"}>
         Giorgos Nonis from{" "}
         <Img height={15} width={15} src={Greece} alt="Greece" />
         Greece located in{" "}

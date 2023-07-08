@@ -6,7 +6,11 @@ const Description = () => {
     <Section>
       <Title>Project Description</Title>
       {PROJECT_DESCRIPTION.map((dsc, i) => {
-        return <Paragraph key={i}>{dsc}</Paragraph>;
+        return (
+          <Paragraph key={i} textAlign={"start"}>
+            {dsc}
+          </Paragraph>
+        );
       })}
     </Section>
   );

@@ -4,10 +4,10 @@ import { Paragraph, Section, Title } from "@/components/Atoms";
 const Contact = () => {
   return (
     <Section>
-      <Title>Contact Information</Title>
+      <Title textAlign={"center"}>Contact Information</Title>
       {CONTACT_INFORMATION.map((info, i) => {
         return (
-          <Paragraph key={i}>
+          <Paragraph key={i} textAlign={"start"}>
             {info.name} {info.value}
           </Paragraph>
         );

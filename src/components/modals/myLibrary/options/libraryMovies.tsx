@@ -13,7 +13,7 @@ const Container = styled("div", {
 });
 
 const LibraryMovies = () => {
-  const { moviesToMap } = useLibraryMovies();
+  const { moviesToMap, containerRef } = useLibraryMovies();
   return (
     <>
       <Head>
@@ -23,7 +23,7 @@ const LibraryMovies = () => {
         />
         <title>My Library</title>
       </Head>
-      <Container>
+      <Container ref={containerRef}>
         {moviesToMap.map((movie, index) => {
           return <Comp.Movie {...movie} key={index} />;
         })}

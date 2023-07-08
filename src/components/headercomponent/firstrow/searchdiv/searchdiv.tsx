@@ -1,5 +1,6 @@
 import { CiSearch } from "react-icons/ci";
 import { styled } from "../../../../../stitches.config";
+import { useSearch } from "./useSearch";
 
 const Container = styled("div", {
   display: "grid",
@@ -20,10 +21,18 @@ const SearchIcon = styled(CiSearch, {
 });
 
 const SearchDiv = () => {
+  const { inputValue, searchInputHandler, onClickSearchHandler } = useSearch();
   return (
     <Container>
-      <Input type="text" />
-      <SearchIcon />
+      <Input
+        type="text"
+        onChange={searchInputHandler}
+        value={inputValue}
+        onKeyDown={(e) => {
+          e.key === "Enter" && onClickSearchHandler();
+        }}
+      />
+      <SearchIcon onClick={onClickSearchHandler} />
     </Container>
   );
 };

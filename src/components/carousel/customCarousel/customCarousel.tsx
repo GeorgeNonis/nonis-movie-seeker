@@ -1,8 +1,28 @@
-import { RiArrowRightSLine, RiArrowLeftSLine } from "react-icons/ri";
 import { useCustomCarousel } from "./useCustomCarousel";
-import styles from "./styles.module.scss";
 import Img from "./img/img";
+import { styled } from "../../../../stitches.config";
+import CarouselArrow from "@/components/Molecules/carouselArrow";
 
+const CarouselContainer = styled("div", {
+  margin: "5rem auto",
+  width: "80%",
+  display: "grid",
+  placeItems: "center",
+  gridTemplateColumns: "1fr 10fr 1fr",
+});
+
+const Viewport = styled("div", {
+  overflow: "hidden",
+  width: "100%",
+});
+
+const Carousel = styled("div", {
+  width: "100%",
+  height: "20rem",
+  display: "flex",
+  gap: "2rem",
+  transition: "all 500ms ease-in-out",
+});
 const CustomCarousel = () => {
   const { handlers, values } = useCustomCarousel();
 
@@ -10,31 +30,26 @@ const CustomCarousel = () => {
     return <p>Loading...</p>;
   }
   return (
-    <div className={styles.carouseldiv}>
-      <div
-        className={styles.carouselbtnleft}
-        onClick={handlers.LeftArrowHandler}
-      >
-        <RiArrowLeftSLine className={styles.leftbutton} />
-      </div>
-      <div className={styles.viewport}>
-        <div
-          className={styles.carousel}
+    <CarouselContainer>
+      <CarouselArrow
+        isLeft={true}
+        onClick={() => handlers.LeftArrowHandler()}
+      />
+      <Viewport>
+        <Carousel
           ref={values.viewportRef}
           style={{ transform: `translateX(${values.translateX}px)` }}
         >
           {values.twentymovies!.map((movie, index) => {
             return <Img {...movie} key={index} />;
           })}
-        </div>
-      </div>
-      <div
-        className={styles.carouselbtnright}
-        onClick={handlers.RightArrowHandler}
-      >
-        <RiArrowRightSLine className={styles.rightbutton} />
-      </div>
-    </div>
+        </Carousel>
+      </Viewport>
+      <CarouselArrow
+        onClick={() => handlers.RightArrowHandler()}
+        isLeft={false}
+      />
+    </CarouselContainer>
   );
 };
 export default CustomCarousel;

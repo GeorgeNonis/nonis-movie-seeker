@@ -6,7 +6,23 @@ const initialState = {
   settingsModal: false,
   libraryModal: false,
   watched: true,
-  movie: {},
+  movie: {
+    _id: "",
+    id: "",
+    __v: 0,
+    description: "",
+    director: [],
+    genre: [],
+    image: [],
+    imdbid: "",
+    rank: 0,
+    rating: "",
+    thumbnail: "",
+    title: "",
+    writers: [""],
+    year: 0,
+  },
+  resultMovies: [],
 } as InitialState;
 
 const state = createSlice({
@@ -31,6 +47,10 @@ const state = createSlice({
     switchWatched(state) {
       state.watched = !state.watched;
     },
+    searchResult(state, { payload }) {
+      const { movies } = payload;
+      state.resultMovies = [...movies];
+    },
   },
 });
 
@@ -40,6 +60,7 @@ export const {
   libModal,
   switchWatched,
   settingsModal,
+  searchResult,
 } = state.actions;
 
 export default state.reducer;
