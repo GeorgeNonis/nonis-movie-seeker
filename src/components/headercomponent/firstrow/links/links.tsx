@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useLinks } from "./useLinks";
-import { LINKS } from "../../../../config";
-import { sharedProperties, styled } from "../../../../stitches.config";
+import { LINKS } from "../../../../../config";
+import { sharedProperties, styled } from "../../../../../stitches.config";
 
 const NavLink = styled(Link, {
   ...sharedProperties,

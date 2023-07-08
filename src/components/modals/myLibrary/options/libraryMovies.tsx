@@ -1,7 +1,16 @@
 import * as Comp from "@/components";
 import { useLibraryMovies } from "./useLibraryMovies";
-import styles from "./styles.module.scss";
 import Head from "next/head";
+import { styled } from "../../../../../stitches.config";
+
+const Container = styled("div", {
+  width: "80%",
+  margin: "5rem auto",
+  display: "grid",
+  gridTemplateColumns: "repeat(2, 1fr)",
+  gap: "2rem",
+  placeItems: "center",
+});
 
 const LibraryMovies = () => {
   const { moviesToMap } = useLibraryMovies();
@@ -14,11 +23,11 @@ const LibraryMovies = () => {
         />
         <title>My Library</title>
       </Head>
-      <div className={styles.librarySectionMovies}>
+      <Container>
         {moviesToMap.map((movie, index) => {
           return <Comp.Movie {...movie} key={index} />;
         })}
-      </div>
+      </Container>
     </>
   );
 };

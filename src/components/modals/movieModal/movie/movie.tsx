@@ -1,10 +1,9 @@
-import styles from "./styles.module.scss";
-import { styled } from "@stitches/react";
 import { IRootState } from "@/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import * as Comp from "../index";
 import { Title } from "@/components/Atoms";
+import { styled } from "../../../../../stitches.config";
 
 const MovieContainer = styled("div", {
   display: "grid",

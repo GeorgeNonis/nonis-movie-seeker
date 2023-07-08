@@ -1,4 +1,4 @@
-export { default as Library } from "./headercomponent/library";
+export { default as Library } from "./headercomponent/firstrow/library";
 export { default as Movie } from "./pagination/movie/movie";
 export { default as Modal } from "./modals/modal/modal";
 export { default as MovieModal } from "./modals/movieModal/movieModal";
@@ -10,7 +10,7 @@ export { default as ScrollToTop } from "./scrollToTop/ScrollToTop";
 export { default as Techonologies } from "./technologies/technologies";
 export { default as MoviePage } from "./pagination/moviepage/moviepage";
 export { default as Carousel } from "./carousel/carousel";
-export { default as SwitchButton } from "./headercomponent/switchbutton/switchbutton";
-export { default as SearchDiv } from "./headercomponent/searchdiv";
-export { default as Links } from "./headercomponent/links";
-export { default as Logo } from "./headercomponent/logo";
+export { default as SwitchButton } from "./headercomponent/secondrow/switchbutton/switchbutton";
+export { default as SearchDiv } from "./headercomponent/firstrow/searchdiv";
+export { default as Links } from "./headercomponent/firstrow/links";
+export { default as Logo } from "./headercomponent/secondrow/logo";

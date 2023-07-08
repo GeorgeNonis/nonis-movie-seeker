@@ -1,8 +1,8 @@
 import { BiCameraMovie } from "react-icons/bi";
 import Link from "next/link";
 // import styles from "./styles.module.scss";
-import { APP_TITLE } from "../../../../config";
-import { styled } from "../../../../stitches.config";
+import { APP_TITLE } from "../../../../../config";
+import { styled } from "../../../../../stitches.config";
 import { keyframes } from "@stitches/react";
 
 const LogoLink = styled(Link, {

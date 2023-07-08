@@ -1,6 +1,6 @@
-import { styled } from "@stitches/react";
 import { Movie } from "@/pages/interfaces";
 import Rating from "../rating/rating";
+import { styled } from "../../../../../../stitches.config";
 
 const TrailerContainer = styled("div", {
   display: "grid",
@@ -14,7 +14,7 @@ const TrailerLink = styled("a", {
   all: "unset",
   cursor: "pointer",
   textAlign: "center",
-  backgroundColor: "#ff1616",
+  backgroundColor: "$brightRed",
   borderRadius: "25px",
   paddingBlock: "1rem",
   color: "white",

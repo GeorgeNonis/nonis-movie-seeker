@@ -16,15 +16,6 @@ export const useActions = ({ ...movieDetails }: Movie) => {
   const watched = rest.watched.find((movie) => movie._id === movieDetails._id);
   const queued = rest.queued.find((movie) => movie._id === movieDetails._id);
 
-  const watchedBackgroundStyle = {
-    background: `${watched ? "#ff1616" : "white"}`,
-    color: `${watched ? "white" : "black"}`,
-  };
-  const queuedBackgroundStyle = {
-    background: `${queued ? "#ff1616" : "white"}`,
-    color: `${queued ? "white" : "black"}`,
-  };
-
   const watchedHandler = () => {
     watched
       ? dispatch(removeMovieWatchList({ id: movieDetails._id }))
@@ -42,8 +33,6 @@ export const useActions = ({ ...movieDetails }: Movie) => {
   const values = {
     watched,
     queued,
-    watchedBackgroundStyle,
-    queuedBackgroundStyle,
   };
 
   return { watchedHandler, queueHandler, values };

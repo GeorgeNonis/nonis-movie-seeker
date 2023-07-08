@@ -6,6 +6,7 @@ export const { styled, css, getCssText } = createStitches({
       primary: "rgb(57, 21, 21)",
       secondary: "#b92f2c",
       sectionBgColor: "#50505042",
+      brightRed: "#ff1616",
     },
     fontSizes: {
       1: "48px",

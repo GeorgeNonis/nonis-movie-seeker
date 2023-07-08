@@ -1,4 +1,4 @@
-import { sharedProperties, styled } from "../../../../stitches.config";
+import { sharedProperties, styled } from "../../../../../stitches.config";
 import useLibrary from "./useLibrary";
 
 const Button = styled("button", {

@@ -1,27 +1,43 @@
 import { RiArrowLeftDoubleFill, RiArrowLeftSLine } from "react-icons/ri";
-import styles from "../styles.module.scss";
-import { ArrowProps } from "./interfaces";
 import { useContext } from "react";
 import { MoviesSection } from "@/context/moviesections/moviesSection";
+import { styled } from "../../../../../stitches.config";
+import { ArrowSpan } from "@/components/Atoms/arrowSpan";
 
 const LeftArrows = () => {
   const { LeftArrowHandler, page } = useContext(MoviesSection);
-  const enable = page + 1 === 1 ? styles.disable : styles.arrows;
-  const enableSvg = page + 1 === 1 ? styles.disablesvg : undefined;
+  const enable = page + 1 === 1;
+  const enableSvg = page + 1 === 1;
+  const DisabledSvg = styled("span", {
+    variants: {
+      disabled: {
+        true: {
+          color: "silver",
+        },
+      },
+    },
+  });
   return (
     <>
-      <span className={enable} onClick={() => LeftArrowHandler(0)}>
-        <RiArrowLeftDoubleFill className={enableSvg} />
-      </span>
-      <span
-        className={enable}
+      <ArrowSpan
+        disabled={enable ? "disable" : "arrows"}
+        onClick={() => LeftArrowHandler(0)}
+      >
+        <DisabledSvg disabled={enableSvg ? "true" : undefined}>
+          <RiArrowLeftDoubleFill />
+        </DisabledSvg>
+      </ArrowSpan>
+      <ArrowSpan
+        disabled={enable ? "disable" : "arrows"}
         onClick={() => {
           if (page === 0) return;
           LeftArrowHandler(page - 1);
         }}
       >
-        <RiArrowLeftSLine className={enableSvg} />
-      </span>
+        <DisabledSvg disabled={enableSvg ? "true" : undefined}>
+          <RiArrowLeftSLine />
+        </DisabledSvg>
+      </ArrowSpan>
     </>
   );
 };

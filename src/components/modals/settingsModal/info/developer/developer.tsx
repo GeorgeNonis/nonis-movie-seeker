@@ -1,9 +1,12 @@
 import { styled } from "@stitches/react";
 import Greece from "public/flags/greece1.png";
 import denmark from "public/flags/denmark.png";
-import styles from "./styles.module.scss";
 import Image from "next/image";
 import { Paragraph, Section, Title } from "@/components/Atoms";
+
+const Img = styled(Image, {
+  marginInline: "5px",
+});
 
 const Developer = () => {
   return (
@@ -11,21 +14,9 @@ const Developer = () => {
       <Title>Developer Information</Title>
       <Paragraph>
         Giorgos Nonis from{" "}
-        <Image
-          height={15}
-          width={15}
-          src={Greece}
-          alt="Greece"
-          className={styles.img}
-        />
+        <Img height={15} width={15} src={Greece} alt="Greece" />
         Greece located in{" "}
-        <Image
-          height={15}
-          width={15}
-          src={denmark}
-          alt="denmark"
-          className={styles.img}
-        />
+        <Img height={15} width={15} src={denmark} alt="denmark" />
         Denmark , Aarhus
       </Paragraph>
     </Section>
