@@ -2,6 +2,7 @@ import * as Comp from "@/components";
 import { useLibraryMovies } from "./useLibraryMovies";
 import Head from "next/head";
 import { styled } from "../../../../../stitches.config";
+import Image from "next/image";
 
 const Container = styled("div", {
   width: "80%",
@@ -24,6 +25,12 @@ const LibraryMovies = () => {
         <title>My Library</title>
       </Head>
       <Container ref={containerRef}>
+        <Image
+          src={"/public/nomovies.png"}
+          alt="no movies"
+          width={1000}
+          height={1000}
+        />
         {moviesToMap.map((movie, index) => {
           return <Comp.Movie {...movie} key={index} />;
         })}
