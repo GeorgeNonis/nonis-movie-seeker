@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { styled } from "../../../stitches.config";
 import { Title } from "../Atoms";
+import githubLogo from "/public/github.png";
 
 const FooterDiv = styled("footer", {
   position: "fixed",
@@ -31,12 +32,7 @@ const Footer = () => {
         href="https://github.com/GeorgeNonis/nonis-movie-seeker"
         target="_blank"
       >
-        <Image
-          src={"/public/github.png"}
-          width={50}
-          height={50}
-          alt="github_logo"
-        />
+        <Image src={githubLogo} width={50} height={50} alt="github_logo" />
       </a>
       <Title>
         Developed By{" "}
