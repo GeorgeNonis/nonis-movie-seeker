@@ -1,8 +1,8 @@
 import { styled } from "@stitches/react";
 import RightArrows from "./rightarrows";
 import LeftArrows from "./leftarrows";
-import { MoviesSection } from "@/context/moviesections/moviesSection";
 import { useContext } from "react";
+import { ResultsSection } from "@/context/results";
 
 const Numbers = styled("div", {
   width: "50%",
@@ -12,8 +12,9 @@ const Numbers = styled("div", {
   placeItems: "center",
 });
 
-const PageNumbers = () => {
-  const { enabled, page, pageNumbers, PageHandler } = useContext(MoviesSection);
+const PageNumbersResult = () => {
+  const { enabled, page, pageNumbers, PageHandler } =
+    useContext(ResultsSection);
 
   const Number = styled("span", {
     cursor: "pointer",
@@ -50,4 +51,4 @@ const PageNumbers = () => {
     </Numbers>
   );
 };
-export default PageNumbers;
+export default PageNumbersResult;

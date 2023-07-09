@@ -1,12 +1,18 @@
 import { useContext } from "react";
 import { RiArrowRightDoubleFill, RiArrowRightSLine } from "react-icons/ri";
-import { MoviesSection } from "@/context/moviesections/moviesSection";
 import { Arrow } from "@/components/Molecules/arrow";
+import { ResultsSection } from "@/context/results";
 
 const RightArrows = () => {
-  const { RightArrowHandler, page, pageNumbers } = useContext(MoviesSection);
+  const { RightArrowHandler, page, pageNumbers } = useContext(ResultsSection);
   const enable = page + 1 === pageNumbers.length;
   const enableSvg = page + 1 === pageNumbers.length;
+
+  /**
+   * SO WE NEED
+   * pageNumbers
+   * Right & Left arrow Handler
+   */
 
   return (
     <>
