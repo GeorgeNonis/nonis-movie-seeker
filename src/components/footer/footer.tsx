@@ -31,10 +31,15 @@ const Footer = () => {
         href="https://github.com/GeorgeNonis/nonis-movie-seeker"
         target="_blank"
       >
-        <Image src={"/github.png"} width={50} height={50} alt="github_logo" />
+        <Image
+          src={"/public/github.png"}
+          width={50}
+          height={50}
+          alt="github_logo"
+        />
       </a>
       <Title>
-        Develop By{" "}
+        Developed By{" "}
         <Link href="https://giorgosnonis.com/" target="_blank">
           Giorgos Nonis
         </Link>
