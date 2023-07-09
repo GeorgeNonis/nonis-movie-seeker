@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 import Rating from "../rating/rating";
 import { styled } from "../../../../../../stitches.config";
 

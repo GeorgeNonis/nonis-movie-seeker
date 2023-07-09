@@ -1,7 +1,7 @@
 import { setDatabaseMovies, setInitialMovies } from "@/store/db-slice";
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { DB, MOVIES_DB } from "../../../config";
+import { DB, MOVIES_DB } from "../../config";
 import { ParseHandler, StringifyHandler } from "./utils";
 import { IRootState } from "@/store";
 import { HomePageProps } from "../interfaces";
@@ -28,3 +28,5 @@ export const useHomePage = ({ ...Movies }: HomePageProps) => {
 
   return { values };
 };
+
+export default useHomePage;

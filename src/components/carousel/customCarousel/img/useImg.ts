@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 import { addMovieDetails } from "@/store/state-slicer";
 import { useDispatch } from "react-redux";
 

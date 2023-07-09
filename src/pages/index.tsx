@@ -1,9 +1,9 @@
 import data from "../../data.json";
 import styles from "../styles/Home.module.css";
 import { GetStaticProps } from "next";
-import { HomePageProps, Movie } from "./interfaces";
+import { HomePageProps, Movie } from "../interfaces";
 import * as Comp from "../components";
-import { useHomePage } from "./hooks/useHomePage";
+import { useHomePage } from "../hooks/useHomePage";
 import Head from "next/head";
 
 const HomePage = ({ ...rest }: HomePageProps) => {

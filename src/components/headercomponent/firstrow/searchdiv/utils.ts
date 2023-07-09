@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 import moviesData from "../../../../../data.json";
 
 const movies: Movie[] = moviesData as Movie[];

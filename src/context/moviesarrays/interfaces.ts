@@ -1,4 +1,4 @@
-import { HomePageProps, Movie } from "@/pages/interfaces";
+import { HomePageProps, Movie } from "@/interfaces";
 
 export interface ContextValues {
   movies: Movie[][];

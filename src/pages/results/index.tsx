@@ -2,7 +2,7 @@ import * as Comp from "@/components";
 import { styled } from "../../../stitches.config";
 import noResult from "/public/no_results.svg";
 import Image from "next/image";
-import { useLogic } from "./useLogic";
+import { useResults } from "../../hooks/useResults";
 import ResultsSectionProvider from "@/context/results";
 import PageNumbersResult from "@/components/pagination/pageNumbersResult/pageNumbers";
 
@@ -21,7 +21,7 @@ const Movies = styled("div", {
 });
 
 const ResultsPage = () => {
-  const { values, handlers } = useLogic();
+  const { values, handlers } = useResults();
   const allValues = { ...values, ...handlers };
   return (
     <ResultsSectionProvider {...allValues}>

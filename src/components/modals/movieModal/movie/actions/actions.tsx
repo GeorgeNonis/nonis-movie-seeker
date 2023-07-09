@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 import { useActions } from "./useActions";
 import { ActionsContainer, Button } from "./styles";
 

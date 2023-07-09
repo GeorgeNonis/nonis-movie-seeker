@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 import Image from "next/image";
 import { useImg } from "./useImg";
 import { styled } from "../../../../../stitches.config";

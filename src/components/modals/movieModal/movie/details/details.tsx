@@ -1,5 +1,5 @@
 import { styled } from "@stitches/react";
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 
 const DetailsContainer = styled("div", {
   display: "grid",

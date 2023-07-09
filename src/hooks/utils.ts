@@ -9,3 +9,5 @@ export const StringifyHandler = (obj: Object) => {
 
   return stringified;
 };
+
+export default StringifyHandler;

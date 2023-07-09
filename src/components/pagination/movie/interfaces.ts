@@ -1,3 +1,3 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 
 export interface MovieProps extends Movie {}

@@ -1,4 +1,4 @@
-import { Movie } from "@/pages/interfaces";
+import { Movie } from "@/interfaces";
 
 interface MovieDatabase extends Movie {
   watched: boolean;

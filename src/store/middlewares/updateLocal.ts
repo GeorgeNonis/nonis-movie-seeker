@@ -1,4 +1,4 @@
-import { StringifyHandler } from "@/pages/hooks/utils";
+import { StringifyHandler } from "@/hooks/utils";
 import { DB } from "../../../config";
 import { DBInitialState } from "../interfaces";
 

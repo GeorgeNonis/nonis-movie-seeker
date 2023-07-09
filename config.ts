@@ -1,4 +1,4 @@
-import { Movies } from "@/pages/interfaces";
+import { Movies } from "@/interfaces";
 import CSS from "/public/technologies/css.png";
 import GIT from "/public/technologies/git.png";
 import HTML from "/public/technologies/html.png";
