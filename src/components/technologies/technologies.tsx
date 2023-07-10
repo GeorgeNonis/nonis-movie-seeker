@@ -1,6 +1,7 @@
 import { FiSettings } from "react-icons/fi";
 import { useTechnologies } from "./useTechnologies";
-import { keyframes, styled } from "@stitches/react";
+import { keyframes } from "@stitches/react";
+import { styled } from "../../../stitches.config";
 
 const TechnologiesDiv = styled("div", {
   zIndex: 10,
@@ -14,6 +15,10 @@ const TechnologiesDiv = styled("div", {
   display: "grid",
   placeItems: "center",
   borderRadius: "50%",
+  "@xs": {
+    width: "2rem",
+    height: "2rem",
+  },
 });
 
 const spinning = keyframes({
@@ -27,8 +32,8 @@ const spinning = keyframes({
 
 const SettingIcon = styled(FiSettings, {
   color: "white",
-  height: "1.5rem",
-  width: "1.5rem",
+  height: "1.3rem",
+  width: "1.3rem",
   animation: `${spinning} 5s infinite linear`,
 });
 const Technologies = () => {

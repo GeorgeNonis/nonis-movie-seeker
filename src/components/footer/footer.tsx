@@ -25,6 +25,13 @@ const Link = styled("a", {
     fontSize: "1.3rem",
   },
 });
+
+const GithubImage = styled(Image, {
+  "@xs": {
+    width: "1.5rem",
+    height: "1.5rem",
+  },
+});
 const Footer = () => {
   return (
     <FooterDiv>
@@ -32,7 +39,12 @@ const Footer = () => {
         href="https://github.com/GeorgeNonis/nonis-movie-seeker"
         target="_blank"
       >
-        <Image src={githubLogo} width={50} height={50} alt="github_logo" />
+        <GithubImage
+          src={githubLogo}
+          width={50}
+          height={50}
+          alt="github_logo"
+        />
       </a>
       <Title>
         Developed By{" "}

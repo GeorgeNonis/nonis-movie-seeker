@@ -4,7 +4,6 @@ import type { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import * as Comp from "@/components";
 import { ToastContainer } from "react-toastify";
-
 import Starsbackdrop from "@/components/starsbackdrop/starsbackdrop";
 
 export default function App({ Component, pageProps }: AppProps) {

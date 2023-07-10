@@ -12,6 +12,14 @@ const Button = styled("button", {
       },
     },
   },
+  "@xs": {
+    fontSize: "$7",
+  },
+  "@sm": {
+    width: "50%",
+    padding: ".5rem 1rem",
+    fontSize: "$8",
+  },
 });
 
 const Container = styled("div", {
@@ -19,6 +27,9 @@ const Container = styled("div", {
   gridAutoFlow: "column",
   justifyContent: "flex-end",
   gap: "1rem",
+  "@xs": {
+    justifyContent: "center",
+  },
 });
 
 const Library = () => {

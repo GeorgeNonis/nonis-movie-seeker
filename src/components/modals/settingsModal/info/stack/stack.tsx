@@ -1,8 +1,8 @@
-import { styled } from "@stitches/react";
 import { TECH_STACK } from "../../../../../../config";
 import Image from "next/image";
 import StitchesLogo from "./stitches/stitches";
 import { Section, Title } from "@/components/Atoms";
+import { styled } from "../../../../../../stitches.config";
 
 const TechStackDiv = styled("div", {
   display: "grid",
@@ -10,6 +10,16 @@ const TechStackDiv = styled("div", {
   gap: "1rem",
   marginBlock: "0.5rem",
   marginInline: "auto",
+
+  "@xs": {
+    gridAutoFlow: "unset",
+    gridTemplateColumns: "repeat(3,1fr)",
+  },
+});
+
+const StackImage = styled(Image, {
+  width: "1.5rem",
+  height: "1.5rem",
 });
 const Stack = () => {
   return (
@@ -18,7 +28,7 @@ const Stack = () => {
       <TechStackDiv>
         {TECH_STACK.map((image, index) => {
           return (
-            <Image
+            <StackImage
               key={index}
               height={60}
               width={60}

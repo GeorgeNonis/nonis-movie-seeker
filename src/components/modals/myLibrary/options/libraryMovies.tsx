@@ -7,11 +7,15 @@ import noMovies from "/public/nomovies.png";
 
 const Container = styled("div", {
   width: "80%",
-  margin: "5rem auto",
+  margin: "8rem auto",
   display: "grid",
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: "2rem",
   placeItems: "center",
+  "@xs": {
+    width: "90%",
+    gridTemplateColumns: "1fr",
+  },
 });
 
 const NoMoviesImg = styled(Image, {

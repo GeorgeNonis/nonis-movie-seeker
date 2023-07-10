@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { IRootState } from "@/store";
 import styles from "./styles.module.scss";
 import fallingStars from "./fallingstars.module.scss";
+import { useEffect } from "react";
 
 export const useSettingsModal = () => {
   const { settingsModal: settingsModalState } = useSelector(
@@ -20,6 +21,14 @@ export const useSettingsModal = () => {
   };
 
   const stars = Array(20).fill(null);
+
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, []);
 
   return {
     ModalHandler,

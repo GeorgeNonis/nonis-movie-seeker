@@ -29,8 +29,8 @@ const titleAnimation = keyframes({
   },
 });
 const CameraIcon = styled(BiCameraMovie, {
-  width: "3rem",
-  height: "3rem",
+  width: "2rem",
+  height: "2rem",
   color: "white",
 });
 
@@ -41,6 +41,9 @@ const MovieLogo = styled("div", {
   fontFamily:
     "UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, AppleSystem, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, AppleSystem, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Cantarell, Helvetica Neue, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI emoji",
   animation: `1889.04ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 250ms 1 normal both running ${titleAnimation}`,
+  "@xs": {
+    fontSize: "$5",
+  },
 });
 
 const Logo = () => {

@@ -7,7 +7,7 @@ const Description = () => {
       <Title>Project Description</Title>
       {PROJECT_DESCRIPTION.map((dsc, i) => {
         return (
-          <Paragraph key={i} textAlign={"start"}>
+          <Paragraph key={i} textAlign={"start"} fontSize={"7"}>
             {dsc}
           </Paragraph>
         );

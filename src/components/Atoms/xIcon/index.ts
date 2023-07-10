@@ -8,4 +8,8 @@ export const XMark = styled(HiXMark, {
   cursor: "pointer",
   height: "2rem",
   width: "2rem",
+  "@xs": {
+    top: ".2rem",
+    right: ".2rem",
+  },
 });

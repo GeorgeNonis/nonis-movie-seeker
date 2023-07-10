@@ -4,6 +4,10 @@ import * as Comp from "../../index";
 const Container = styled("div", {
   display: "flex",
   justifyContent: "space-between",
+  "@xs": {
+    flexDirection: "column",
+    gap: "1rem",
+  },
 });
 
 const SecondRow = () => {

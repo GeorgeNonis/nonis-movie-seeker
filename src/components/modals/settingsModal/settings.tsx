@@ -18,7 +18,7 @@ const SettingsModal = () => {
           return <div className={fallingStars["shooting_star"]} key={i}></div>;
         })}
         <Content>
-          <Title marginBlock={"1"}>
+          <Title marginBlock={"1"} fontSize={"6"}>
             Tech Stack that has been used for this project
           </Title>
           <Comp.Developer />

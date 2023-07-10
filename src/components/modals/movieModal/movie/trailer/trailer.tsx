@@ -8,6 +8,10 @@ const TrailerContainer = styled("div", {
   width: "100%",
   placeContent: "center",
   alignItems: "center",
+  "@xs": {
+    fontSize: "$7",
+    padding: "0 1rem",
+  },
 });
 
 const TrailerLink = styled("a", {
@@ -24,6 +28,13 @@ const TrailerLink = styled("a", {
   transition: "all 250ms ease-in-out",
   "&:hover": {
     transform: "scale(1.08)",
+  },
+  "@xs": {
+    fontSize: "$7",
+  },
+  "@sm": {
+    fontSize: "$7",
+    fontWeight: "$light",
   },
 });
 

@@ -2,7 +2,7 @@ import { IRootState } from "@/store";
 import { useSelector } from "react-redux";
 import Image from "next/image";
 import * as Comp from "../index";
-import { Title } from "@/components/Atoms";
+import { Paragraph, Title } from "@/components/Atoms";
 import { styled } from "../../../../../stitches.config";
 
 const MovieContainer = styled("div", {
@@ -13,6 +13,12 @@ const MovieContainer = styled("div", {
   height: "100%",
   color: "black",
   background: "white",
+
+  "@xs": {
+    gridTemplateColumns: "1fr",
+    marginBottom: "2rem",
+    height: "unset",
+  },
 });
 
 const MovieDetails = styled("div", {
@@ -23,6 +29,11 @@ const MovieDetails = styled("div", {
   gap: "1rem",
   justifyItems: "baseline",
   paddingRight: "2rem",
+  "@xs": {
+    paddingRight: "0",
+    placeItems: "center",
+    height: "unset",
+  },
 });
 
 const MovieImage = styled(Image, {
@@ -52,7 +63,7 @@ const Movie = () => {
           {movie.title}
         </Title>
 
-        <p>{movie.description}</p>
+        <Paragraph colors="black">{movie.description}</Paragraph>
         <Comp.Trailer {...movie} />
         <Comp.Details {...movie} />
         <Comp.Actions {...movie} />

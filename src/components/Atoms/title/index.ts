@@ -4,6 +4,9 @@ export const Title = styled("h1", {
   textAlign: "center",
   color: "white",
   fontSize: "$6",
+  "@xs": {
+    fontSize: "$6",
+  },
   variants: {
     textAlign: {
       center: {

@@ -1,6 +1,6 @@
-import { styled } from "@stitches/react";
 import { BsFillArrowUpSquareFill } from "react-icons/bs";
 import { useScrollToTop } from "./useScrollToTop";
+import { styled } from "../../../stitches.config";
 
 const ToTopContainer = styled("div", {
   position: "fixed",
@@ -34,6 +34,11 @@ const ToTopContainer = styled("div", {
         display: "none",
       },
     },
+  },
+
+  "@xs": {
+    bottom: "1rem",
+    right: ".5rem",
   },
 });
 

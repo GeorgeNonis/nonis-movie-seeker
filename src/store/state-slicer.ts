@@ -36,7 +36,6 @@ const state = createSlice({
       state.libraryModal = !state.libraryModal;
     },
     settingsModal(state) {
-      console.log("clicking");
       state.settingsModal = !state.settingsModal;
     },
     addMovieDetails(state, { payload }) {

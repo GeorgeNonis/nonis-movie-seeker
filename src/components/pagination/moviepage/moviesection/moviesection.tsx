@@ -1,10 +1,10 @@
-import { styled } from "@stitches/react";
 import { useContext } from "react";
 import Movie from "../../movie";
 import { MoviesSection } from "@/context/moviesections/moviesSection";
 import { useSelector } from "react-redux";
 import { IRootState } from "@/store";
 import LoadingSpinner from "@/components/laoadingspinner/loadingspinner";
+import { styled } from "../../../../../stitches.config";
 
 const Section = styled("div", {
   width: "100%",
@@ -13,6 +13,9 @@ const Section = styled("div", {
   gridTemplateColumns: "repeat(2, 1fr)",
   gap: "2rem",
   placeItems: "center",
+  "@xs": {
+    gridTemplateColumns: "1fr",
+  },
 });
 
 const MovieSection = () => {

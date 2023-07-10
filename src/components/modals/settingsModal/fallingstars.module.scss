@@ -6,6 +6,7 @@ $shooting-time: 3000ms;
   background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
   font-family: "Anton", sans-serif;
   overflow: auto;
+  overflow-x: hidden;
 
   .night {
     position: relative;
@@ -16,6 +17,7 @@ $shooting-time: 3000ms;
   }
 
   .shooting_star {
+    overflow: hidden;
     position: absolute;
     left: 50%;
     top: 50%;

@@ -1,10 +1,10 @@
 import { useSelector } from "react-redux";
 import { useMovieModal } from "./useMovieModal";
 import { IRootState } from "@/store";
-import Movie from "./movie/movie";
-import { styled } from "@stitches/react";
 import { Backdrop } from "../settingsModal/styles";
 import { XMark } from "@/components/Atoms";
+import Movie from "./movie/movie";
+import { styled } from "../../../../stitches.config";
 
 const ModalContent = styled("div", {
   zIndex: 101,
@@ -34,6 +34,15 @@ const ModalContent = styled("div", {
         visibility: "hidden",
       },
     },
+  },
+
+  "@xs": {
+    width: "90%",
+    height: "90%",
+  },
+  "@sm": {
+    width: "90%",
+    height: "90%",
   },
 });
 

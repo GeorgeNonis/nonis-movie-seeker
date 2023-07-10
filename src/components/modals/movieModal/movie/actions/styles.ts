@@ -8,6 +8,17 @@ export const ActionsContainer = styled("div", {
   placeItems: "center",
   marginBlock: "2rem",
   width: "100%",
+
+  "@xs": {
+    width: "80%",
+    height: "2rem",
+    marginBottom: "1rem",
+  },
+  "@sm": {
+    width: "100%",
+    height: "3rem",
+    marginBottom: "1rem",
+  },
 });
 
 export const Button = styled("button", {
@@ -28,6 +39,16 @@ export const Button = styled("button", {
     borderColor: "$brightRed",
     backgroundColor: "$brightRed",
     color: "white !important",
+  },
+
+  "@xs": {
+    fontSize: "10px",
+    padding: ".5rem",
+  },
+  "@sm": {
+    fontSize: "$7",
+    fontWeight: "$light",
+    padding: ".6rem .8rem",
   },
 
   variants: {

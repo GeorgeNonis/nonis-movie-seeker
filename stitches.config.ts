@@ -16,6 +16,7 @@ export const { styled, css, getCssText } = createStitches({
       5: "18px",
       6: "16px",
       7: "12px",
+      8: "10px",
     },
     fontWeights: {
       light: "300",

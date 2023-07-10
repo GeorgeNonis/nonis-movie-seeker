@@ -31,4 +31,11 @@ export const ArrowSpan = styled("span", {
       },
     },
   },
+
+  "@xs": {
+    width: "1.4rem !important",
+    height: "1.4rem !important",
+    fontSize: "$7",
+    borderRadius: "2px !important",
+  },
 });

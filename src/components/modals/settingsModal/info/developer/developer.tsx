@@ -11,7 +11,7 @@ const Img = styled(Image, {
 const Developer = () => {
   return (
     <Section>
-      <Title>Developer Information</Title>
+      <Title fontSize={"6"}>Developer Information</Title>
       <Paragraph textAlign={"start"}>
         Giorgos Nonis from{" "}
         <Img height={15} width={15} src={Greece} alt="Greece" />

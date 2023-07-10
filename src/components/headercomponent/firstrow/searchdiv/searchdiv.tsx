@@ -9,6 +9,9 @@ const Container = styled("div", {
   background: "white",
   borderRadius: "15px",
   padding: "0.5rem",
+  // "@xs": {
+  //   gridArea: "search",
+  // },
 });
 
 const Input = styled("input", {
