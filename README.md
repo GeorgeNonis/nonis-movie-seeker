@@ -13,14 +13,14 @@
 </p>
 Main technologies used for this project :zap:
 <p>
-  <img alt="Next.js" src="./readme_imgs/nextjs.png" width="50"/>
+  <img alt="Next.js" src="./readme_imgs/next.png" width="50"/>
   <img alt="TypeScript" src="./readme_imgs/typescript.png" width="50"/>
   <img alt="JavaScript" src="./readme_imgs/javascript.png" width="50"/>
   <img alt="Redux" src="./readme_imgs/redux.png" width="50"/>
   <img alt="Git" src="./readme_imgs/git.png" width="50"/>
   <img alt="React-Stitches" src="./readme_imgs/stitches.svg" width="50"/>
-  <img alt="CSS" src="./readme_imgs/css3.png" width="50"/>
-  <img alt="HTML5" src="./readme_imgs/html5.png" width="50"/>
+  <img alt="CSS" src="./readme_imgs/css.png" width="50"/>
+  <img alt="HTML5" src="./readme_imgs/html.png" width="50"/>
 </p>
 Contact Information :phone:
 Email: Georgenonis@gmail.com
