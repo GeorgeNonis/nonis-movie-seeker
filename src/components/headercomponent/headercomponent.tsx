@@ -40,6 +40,9 @@ const Header = styled("div", {
   backgroundSize: "100%",
   borderRadius: "2rem",
   padding: "3rem",
+  "@lg": {
+    height: "15rem",
+  },
   "@md": {
     height: "15rem",
   },
