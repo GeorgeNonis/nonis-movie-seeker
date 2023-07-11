@@ -3,6 +3,7 @@
 <h3>This app was made with Next.js</h3>
 
 `npm i / yarn install`
+</br>
 `npm run dev / yarn dev`
 
 <h3>Open http://localhost:3000 with your browser check the app.</h3>
