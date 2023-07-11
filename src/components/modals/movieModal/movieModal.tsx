@@ -35,12 +35,12 @@ const ModalContent = styled("div", {
       },
     },
   },
-
-  "@xs": {
+  "@sm": {
     width: "90%",
     height: "90%",
   },
-  "@sm": {
+
+  "@xs": {
     width: "90%",
     height: "90%",
   },

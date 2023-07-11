@@ -17,13 +17,6 @@ const DisabledSvg = styled("span", {
       },
     },
   },
-
-  // "@xs": {
-  //   width: "1.4rem",
-  //   height: "1.4rem",
-  // fontSize: "$7",
-  // borderRadius: "2px",
-  // },
 });
 
 export const Arrow = ({ ...rest }: ArrowProps) => {

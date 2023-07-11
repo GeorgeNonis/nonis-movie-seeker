@@ -10,6 +10,12 @@ const Numbers = styled("div", {
   display: "grid",
   gridAutoFlow: "column",
   placeItems: "center",
+  "@md": {
+    width: "80%",
+  },
+  "@sm": {
+    width: "90%",
+  },
   "@xs": {
     width: "95%",
   },
@@ -32,6 +38,12 @@ const Number = styled("span", {
     transform: "scale(1.2)",
   },
 
+  "@sm": {
+    width: "2rem",
+    height: "2rem",
+    fontSize: "$7",
+    borderRadius: "2px",
+  },
   "@xs": {
     width: "1.4rem",
     height: "1.4rem",

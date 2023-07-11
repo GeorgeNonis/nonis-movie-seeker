@@ -16,8 +16,6 @@ interface MOVIES_DB_PROPS {
   queued: Movies[];
 }
 
-export const APP_TITLE = `Unraveling Noni's World`;
-
 export const MOVIES_DB: MOVIES_DB_PROPS = {
   // "white"
   theme: false,
@@ -26,6 +24,7 @@ export const MOVIES_DB: MOVIES_DB_PROPS = {
 };
 
 export const DB = "MOVIES_STORAGE";
+export const APP_TITLE = `Unraveling Noni's World`;
 
 export const LINKS = [
   { link: "Home", value: "/" },

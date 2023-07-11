@@ -12,13 +12,13 @@ const Button = styled("button", {
       },
     },
   },
-  "@xs": {
-    fontSize: "$7",
-  },
   "@sm": {
     width: "50%",
     padding: ".5rem 1rem",
     fontSize: "$8",
+  },
+  "@xs": {
+    fontSize: "$7",
   },
 });
 

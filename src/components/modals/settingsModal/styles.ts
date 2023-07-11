@@ -1,4 +1,3 @@
-import { HiXMark } from "react-icons/hi2";
 import { keyframes } from "@stitches/react";
 import { styled } from "../../../../stitches.config";
 

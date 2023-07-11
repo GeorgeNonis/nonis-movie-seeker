@@ -1,38 +1,40 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1>:exclamation: Unraveling Noni's World :exclamation:</h1>
 
-## Getting Started
+<h3>This app was made with Next.js</h3>
 
-First, run the development server:
+`npm i / yarn install`
+`npm run dev / yarn dev`
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+<h3>Open http://localhost:3000 with your browser check the app.</h3>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<p>
+  <h3>This project, Unraveling Noni's World, was undertaken to enhance my frontend development skills using Next.js, a popular React framework. The goal was to gain hands-on experience with Next.js and explore its features and capabilities.</h3>
+</p>
+Main technologies used for this project :zap:
+<p>
+  <img alt="Next.js" src="./readme_imgs/nextjs.png" width="50"/>
+  <img alt="TypeScript" src="./readme_imgs/typescript.png" width="50"/>
+  <img alt="JavaScript" src="./readme_imgs/javascript.png" width="50"/>
+  <img alt="Redux" src="./readme_imgs/redux.png" width="50"/>
+  <img alt="Git" src="./readme_imgs/git.png" width="50"/>
+  <img alt="Sass" src="./readme_imgs/sass.png" width="50"/>
+  <img alt="CSS" src="./readme_imgs/css3.png" width="50"/>
+  <img alt="HTML5" src="./readme_imgs/html5.png" width="50"/>
+</p>
+Contact Information :phone:
+Email: Georgenonis@gmail.com
+Phone: +45 71 41 77 42
+External Links :link:
+GitHub
+LinkedIn
+Project Description :page_with_curl:
+<p>
+  This project, Unraveling Noni's World, was undertaken with the goal of enhancing my frontend development skills using Next.js, a popular React framework. By working on this project, I aimed to gain hands-on experience with Next.js and explore its features and capabilities.
+</p>
+<p>
+  Throughout the development process, I focused on implementing best practices in front-end development, including efficient component architecture, responsive design, and optimized performance. I also incorporated modern tools and libraries such as TypeScript, Redux, and React-Stitches to ensure a robust and scalable codebase.
+</p>
+<p>
+  The project showcases my ability to build interactive and user-friendly web applications, leveraging the power of Next.js and the selected tech stack. I have utilized industry-standard patterns and followed established coding conventions to ensure maintainability and readability of the code.
+</p>
+If you have any additional information or specific edits you'd like me to make, please let me know.

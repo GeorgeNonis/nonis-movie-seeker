@@ -5,12 +5,16 @@ import { sharedProperties, styled } from "../../../../../stitches.config";
 
 const NavLink = styled(Link, {
   ...sharedProperties,
-  "@xs": {
-    fontSize: "$7",
+  "@md": {
+    padding: ".5rem 1rem",
+    fontSize: "$6",
   },
   "@sm": {
     padding: ".5rem 1rem",
     fontSize: "$8",
+  },
+  "@xs": {
+    fontSize: "$7",
   },
 });
 

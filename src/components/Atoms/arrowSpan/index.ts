@@ -32,6 +32,12 @@ export const ArrowSpan = styled("span", {
     },
   },
 
+  "@sm": {
+    width: "2rem !important",
+    height: "2rem !important",
+    fontSize: "$7",
+    borderRadius: "2px !important",
+  },
   "@xs": {
     width: "1.4rem !important",
     height: "1.4rem !important",

@@ -40,16 +40,18 @@ const Header = styled("div", {
   backgroundSize: "100%",
   borderRadius: "2rem",
   padding: "3rem",
+  "@md": {
+    height: "15rem",
+  },
+  "@sm": {
+    width: "90%",
+    height: "15rem",
+  },
   "@xs": {
     width: "90%",
     height: "30rem",
     padding: "0",
     animation: `${changeBackgroundLarge} 10s step-end infinite`,
-  },
-  "@sm": {
-    width: "90%",
-    height: "15rem",
-    animation: `${changeBackground} 10s step-end infinite`,
   },
 });
 

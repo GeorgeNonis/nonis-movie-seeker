@@ -9,14 +9,14 @@ export const ActionsContainer = styled("div", {
   marginBlock: "2rem",
   width: "100%",
 
-  "@xs": {
-    width: "80%",
-    height: "2rem",
-    marginBottom: "1rem",
-  },
   "@sm": {
     width: "100%",
     height: "3rem",
+    marginBottom: "1rem",
+  },
+  "@xs": {
+    width: "80%",
+    height: "2rem",
     marginBottom: "1rem",
   },
 });
@@ -41,14 +41,14 @@ export const Button = styled("button", {
     color: "white !important",
   },
 
-  "@xs": {
-    fontSize: "10px",
-    padding: ".5rem",
-  },
   "@sm": {
     fontSize: "$7",
     fontWeight: "$light",
     padding: ".6rem .8rem",
+  },
+  "@xs": {
+    fontSize: "10px",
+    padding: ".5rem",
   },
 
   variants: {

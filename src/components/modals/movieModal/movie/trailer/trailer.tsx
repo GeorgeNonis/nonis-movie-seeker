@@ -29,12 +29,12 @@ const TrailerLink = styled("a", {
   "&:hover": {
     transform: "scale(1.08)",
   },
-  "@xs": {
-    fontSize: "$7",
-  },
   "@sm": {
     fontSize: "$7",
     fontWeight: "$light",
+  },
+  "@xs": {
+    fontSize: "$7",
   },
 });
 
