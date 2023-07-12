@@ -45,6 +45,7 @@ const LibraryMovies = () => {
         </Container>
       ) : (
         <NoMoviesImg
+          ref={containerRef}
           src={noMovies}
           alt="no movies"
           width={1000}

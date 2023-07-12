@@ -5,7 +5,7 @@ import { useRouter } from "next/router";
 
 export const useLibraryMovies = () => {
   const router = useRouter();
-  const containerRef = useRef<HTMLInputElement>(null);
+  const containerRef = useRef<HTMLInputElement | any>(null);
   const { DATABASE, state } = useSelector((state: IRootState) => state);
   const { watched } = state;
   const { queued, watched: watchedMovies, twentymovies } = DATABASE;
